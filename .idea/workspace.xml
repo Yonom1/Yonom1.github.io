@@ -21,13 +21,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="904ffc43-3b18-4396-93b7-f63a9c172c2c" name="更改" comment="debug">
-      <change afterPath="$PROJECT_DIR$/aboutme.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aboutme/whyYonom1.html" afterDir="false" />
+    <list default="true" id="904ffc43-3b18-4396-93b7-f63a9c172c2c" name="更改" comment="完善了文件结构，更新了一篇博客">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Epilogue.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/introduce.html" beforeDir="false" afterPath="$PROJECT_DIR$/introduce.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +101,7 @@
       <workItem from="1744364244806" duration="738000" />
       <workItem from="1744430520566" duration="2000" />
       <workItem from="1744770312023" duration="6942000" />
-      <workItem from="1744782959265" duration="3625000" />
+      <workItem from="1744782959265" duration="4280000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -148,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744783069891</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="完善了文件结构，更新了一篇博客">
+      <option name="closed" value="true" />
+      <created>1744786868603</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1744786868603</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +190,7 @@
     <MESSAGE value="initial commit2" />
     <MESSAGE value="created my own webpage using the template from the personal homepage website." />
     <MESSAGE value="debug" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug" />
+    <MESSAGE value="完善了文件结构，更新了一篇博客" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善了文件结构，更新了一篇博客" />
   </component>
 </project>
