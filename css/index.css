@@ -127,3 +127,69 @@
 	text-decoration: none;
 	
 }
+
+.custom-btn {
+	background-color: #ffffffdd;
+	border-radius: 20px;
+	border: 1px solid #ccc;
+	padding: 20px;
+	font-size: 20px;
+	color: #333;
+	text-align: left;
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+	background-color: #f0f0f0;
+	text-decoration: none;
+}
+
+.custom-btn {
+	background-color: #ffffffdd;
+	border-radius: 20px;
+	border: 1px solid #ccc;
+	padding: 20px;
+	font-size: 20px;
+	color: #333;
+	text-align: left;
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+	background-color: #f0f0f0;
+	text-decoration: none;
+}
+
+
+ .custom-card {
+	 background-color: #f9f9f9;
+	 padding: 15px 20px;
+	 border-radius: 12px;
+	 margin-bottom: 15px;
+	 box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+	 display: inline-block;
+	 width: 100%;
+ }
+
+.custom-card a {
+	color: #337ab7;
+	text-decoration: none;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+}
+
+.custom-card a:hover {
+	text-decoration: underline;
+}
+
+.custom-card .glyphicon {
+	margin-right: 8px;
+}
+
