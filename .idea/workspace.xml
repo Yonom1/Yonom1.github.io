@@ -21,7 +21,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="904ffc43-3b18-4396-93b7-f63a9c172c2c" name="更改" comment="添加了选项卡 icon" />
+    <list default="true" id="904ffc43-3b18-4396-93b7-f63a9c172c2c" name="更改" comment="修改返回主页的 icon">
+      <change beforePath="$PROJECT_DIR$/aboutme.html" beforeDir="false" afterPath="$PROJECT_DIR$/aboutme.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aboutme/whyYonom1.html" beforeDir="false" afterPath="$PROJECT_DIR$/aboutme/whyYonom1.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,6 +105,7 @@
       <workItem from="1744782959265" duration="4280000" />
       <workItem from="1744787351325" duration="56000" />
       <workItem from="1744788373614" duration="629000" />
+      <workItem from="1744789013159" duration="304000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -175,7 +179,31 @@
       <option name="project" value="LOCAL" />
       <updated>1744788965850</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="添加了选项卡 icon">
+      <option name="closed" value="true" />
+      <created>1744789057977</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1744789057977</updated>
+    </task>
+    <task id="LOCAL-00011" summary="修改博客中的 emoji">
+      <option name="closed" value="true" />
+      <created>1744789134138</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1744789134138</updated>
+    </task>
+    <task id="LOCAL-00012" summary="修改返回主页的 icon">
+      <option name="closed" value="true" />
+      <created>1744789223734</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1744789223734</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +244,8 @@
     <MESSAGE value="debug" />
     <MESSAGE value="完善了文件结构，更新了一篇博客" />
     <MESSAGE value="添加了选项卡 icon" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了选项卡 icon" />
+    <MESSAGE value="修改博客中的 emoji" />
+    <MESSAGE value="修改返回主页的 icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改返回主页的 icon" />
   </component>
 </project>
