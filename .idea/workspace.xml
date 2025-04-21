@@ -21,10 +21,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="904ffc43-3b18-4396-93b7-f63a9c172c2c" name="更改" comment="未公开的简历">
-      <change afterPath="$PROJECT_DIR$/links.html" afterDir="false" />
+    <list default="true" id="904ffc43-3b18-4396-93b7-f63a9c172c2c" name="更改" comment="add github and bilibili links">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/links/Pengjin2005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/links/TenofHearts.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/links/byml.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +108,9 @@
       <workItem from="1744787351325" duration="56000" />
       <workItem from="1744788373614" duration="629000" />
       <workItem from="1744789013159" duration="459000" />
-      <workItem from="1744799025055" duration="5840000" />
+      <workItem from="1744799025055" duration="6163000" />
+      <workItem from="1744805741483" duration="379000" />
+      <workItem from="1744815979040" duration="16000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -221,7 +224,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744799041857</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add links">
+      <option name="closed" value="true" />
+      <created>1744805044230</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1744805044230</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add github and bilibili links">
+      <option name="closed" value="true" />
+      <created>1744806108582</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1744806108582</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +285,8 @@
     <MESSAGE value="修改返回主页的 icon" />
     <MESSAGE value="未公开的简历" />
     <MESSAGE value="未公开的简历" />
-    <option name="LAST_COMMIT_MESSAGE" value="未公开的简历" />
+    <MESSAGE value="add links" />
+    <MESSAGE value="add github and bilibili links" />
+    <option name="LAST_COMMIT_MESSAGE" value="add github and bilibili links" />
   </component>
 </project>
