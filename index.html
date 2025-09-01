@@ -1,123 +1,191 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-		<link rel="stylesheet" href="css/bootstrap.min.css" >
-		<link rel="stylesheet" href="css/index.css">
-		<link rel="icon" href="logo.png">
-		<title>Yonom1 的个人主页 - yonom1.github.io</title>
-	</head>
-	<body>
-		<div class="ls"></div>
-		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-					<!-- 按钮  data-toggle="collapse"-->
-					<button class="navbar-toggle"  data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- LOGO -->
-					<a href="/" class="navbar-brand">Yonom1 的个人主页</a>
-				</div>
-				<!-- 导航 -->
-				<div class="collapse navbar-collapse" aria-expanded="false">
-					<ul class="nav navbar-nav navbar-right" >
-						<li class="active"><a href="index.html">我的博客</a></li>
-						<li class=""><a href="links.html">友情链接</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		<!-- 内容 -->
-		<div class="container pad">
-			<div class="row">
-				<div class="col-md-12 baron">
-					<img src="img/logo.jpg" class="img-responsive nat">
-					<h1>刘晓睿</h1>
-					<p>https://yonom1.github.io</p>
-<!--					<button class="btn btn-danger">&nbsp;关注&nbsp;</button>-->
-				</div>
-				<div class="col-md-12">
-					<div class="page-header">
-						<ul class="nav nav-tabs">
-							<li class="active">
-								<a href="index.html">个人简介</a>
-							</li>
-							<li>
-								<a href="introduce.html">博客</a>
-							</li>
-						</ul>
-						<table class="table">
-							<tbody>
-								<tr>
-									<td>姓名：刘晓睿</td>
-									<td>民族：汉族</td>
-								</tr>
-								<tr>
-									<td>星座：巨蟹座</td>
-									<td>学校：南京大学</td>
-								</tr>
-								<tr>
-									<td>籍贯：中国·山东·滨州·阳信</td>
-									<td>专业：智能科学与技术</td>
-								</tr>
-								<tr>
-									<td>梦想职业：AI算法工程师</td>
-									<td>梦想坐标：北京</td>
-								</tr>
-								<tr>
-									<td>邮箱：lxr209042@126.com</td>
-									<td>QQ：2818075861</td>
-								</tr>
-								<tr>
-									<td>github：<a href="https://github.com/Yonom1" target="_blank">Yonom1</a></td>
-									<td>bilibili：<a href="https://space.bilibili.com/1629601067?spm_id_from=333.337.0.0" target="_blank">得闲饮茶362</a>
-								</tr>
-<!--								<tr><td colspan="2">自我说明：</td></tr>-->
-								<tr>
-									<td colspan="2">
-										<h1>个人介绍</h1>
-										<br>
-										<p>
-											我是一名大二学生，目前就读于南京大学，专业是智能科学与技术。<br><br>
-											我是一个非常喜欢学习的人，喜欢学习各种新的知识。<br><br>
-										</p>
-										<h1>
-											正在探索/希望探索的领域：
-										</h1>
-										<br>
-										<p>
-											1. 目标检测<br><br>
-											2. 3D-Version<br><br>
-											3. 基于大模型的具身智能<br><br>
-											4. 自然语言处理<br><br>
-										</p>
-										<h1>我的爱好</h1>
-										<br>
-										<p>唱歌、乒乓球、围棋、街舞、王者荣耀、无畏契约</p>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>刘晓睿 · Yonom1 — 个人主页</title>
+	<meta name="description" content="刘晓睿（Yonom1）· 南京大学 智能科学与技术 · AI/3D Vision 个人主页" />
+	<meta name="color-scheme" content="light dark" />
+	<link rel="icon" href="logo.png" />
+	<style>
+		:root {
+			--bg: #0b0b0b;
+			--card: #121212;
+			--text: #f8f8f8;
+			--muted: #c9c9c9;
+			--brand: #7BA05B;    /* 主色：绿茶色 */
+			--brand-2: #5C8A47;  /* 次色：深茶绿 */
+			--ring: rgba(123, 160, 91, .35);
+			--shadow: 0 10px 30px rgba(0,0,0,.35);
+			--radius: 16px;
+			--maxw: 1100px;
+		}
+		@media (prefers-color-scheme: light) {
+			:root {
+				--bg: #f6fff2;
+				--card: #f2faec;
+				--text: #1a1a1a;
+				--muted: #5a5a5a;
+				--shadow: 0 10px 30px rgba(0,0,0,.08);
+			}
+		}
+		* { box-sizing: border-box; }
+		body {
+			margin: 0;
+			font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+			color: var(--text);
+			background: radial-gradient(1200px 1200px at 80% -10%, rgba(123,160,91,.12), transparent 60%),
+			radial-gradient(900px 900px at 10% 10%, rgba(92,138,71,.10), transparent 60%),
+			var(--bg);
+		}
+		a { color: inherit; text-decoration: none; }
+		.container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
 
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
+		.nav { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(140%) blur(10px); background: color-mix(in oklab, var(--bg) 85%, transparent); border-bottom: 1px solid color-mix(in oklab, var(--brand) 25%, transparent); }
+		.nav-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+		.brand { display:flex; align-items:center; gap:12px; font-weight:700; }
+		.brand .dot { width:10px; height:10px; border-radius:50%; background: linear-gradient(90deg, var(--brand), var(--brand-2)); box-shadow: 0 0 0 4px var(--ring); }
+		.nav-links { display:flex; gap:18px; }
+		.btn { display:inline-flex; align-items:center; gap:6px; padding:10px 14px; border-radius:999px; border:1px solid color-mix(in oklab, var(--brand) 45%, transparent); background: color-mix(in oklab, var(--card) 80%, transparent); box-shadow: var(--shadow); }
+		.btn:hover { transform: translateY(-1px); }
+
+		.hero { display:grid; grid-template-columns: 1.1fr .9fr; gap:28px; align-items:center; padding: 40px 0 24px; }
+		.hero-card { background: linear-gradient(180deg, color-mix(in oklab, var(--card) 88%, transparent), color-mix(in oklab, var(--card) 100%, transparent)); border: 1px solid color-mix(in oklab, var(--brand) 20%, transparent); border-radius: calc(var(--radius) + 6px); padding: 28px; box-shadow: var(--shadow); }
+		.kicker { color: var(--brand-2); font-weight:700; letter-spacing:.18em; text-transform:uppercase; font-size:12px; }
+		.title { font-size: clamp(28px, 4vw, 44px); line-height:1.12; margin:10px 0; font-weight:800; }
+		.subtitle { color: var(--muted); font-size: clamp(15px, 1.6vw, 18px); line-height:1.7; }
+		.cta { margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; }
+
+		.avatar-card { position: relative; aspect-ratio:1/1; border-radius:22px; overflow:hidden; background:#111; border:1px solid color-mix(in oklab, var(--brand) 20%, transparent); box-shadow: var(--shadow); }
+		.avatar-card img { width:100%; height:100%; object-fit: cover; }
+		.badge { position:absolute; left:14px; bottom:14px; padding:8px 12px; border-radius:999px; font-size:13px; font-weight:700; background: linear-gradient(90deg, var(--brand), var(--brand-2)); color:#111; }
+
+		.section { padding:8px 0 40px; }
+		.sec-title { font-size:20px; font-weight:800; margin:0 0 14px; }
+		.grid { display:grid; grid-template-columns: repeat(12, 1fr); gap:18px; }
+		.card { grid-column: span 6; border-radius:var(--radius); padding:20px; background: var(--card); border:1px solid color-mix(in oklab, var(--brand) 18%, transparent); box-shadow: var(--shadow); }
+		.card p { margin:8px 0 0; color:var(--muted); line-height:1.8; }
+		.kv { display:grid; grid-template-columns: 120px 1fr; gap:8px; padding:10px 0; border-bottom:1px dashed color-mix(in oklab, var(--brand) 25%, transparent); }
+		.kv:last-child { border-bottom:0; }
+		.kv .k { color:var(--muted); }
+
+		/* 占位缩略图 */
+		.thumb { width:100%; aspect-ratio: 16/9; border-radius: 12px; border:1px dashed color-mix(in oklab, var(--brand) 40%, transparent); background:
+				repeating-linear-gradient(135deg, color-mix(in oklab, var(--brand) 22%, transparent) 0 12px, transparent 12px 24px);
+			display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:14px; }
+
+		/* 社交图标 */
+		.social a { display:inline-flex; align-items:center; gap:8px; margin: 6px 0; }
+		.ico { width: 18px; height: 18px; display:inline-block; }
+		.ico svg { width:100%; height:100%; fill: currentColor; }
+
+		footer { margin:40px 0 10px; color:var(--muted); font-size:14px; display:flex; justify-content:center; }
+
+		@media (max-width: 900px){ .hero{grid-template-columns:1fr;} .card{grid-column:span 12;} }
+	</style>
+</head>
+<body>
+<header class="nav">
+	<div class="container nav-inner">
+		<a class="brand" href="#top"><span class="dot"></span><span>🍵 Yonom1 · 个人主页</span></a>
+		<nav class="nav-links">
+			<a class="btn" href="#about">🙋 关于</a>
+			<a class="btn" href="#projects">📂 项目</a>
+			<a class="btn" href="#contact">📧 联系</a>
+			<a class="btn" href="introduce.html" target="_blank" rel="noopener">📝 博客</a>
+			<a class="btn" href="links.html" target="_blank" rel="noopener">🔗 友情链接</a>
+		</nav>
+	</div>
+</header>
+
+<main class="container" id="top">
+	<section class="hero">
+		<div class="hero-card">
+			<div class="kicker">AI · 3D Vision</div>
+			<h1 class="title">刘晓睿（Yonom1） 🚀</h1>
+			<p class="subtitle">南京大学 · 智能科学与技术。本科阶段专注于 <strong>3D视觉/高效渲染</strong> 与 <strong>视频-语言检索</strong>，也对 <strong>具身智能</strong> 持续探索。这里存放我的项目、笔记与链接。</p>
+			<div class="cta">
+				<a class="btn" href="https://github.com/Yonom1" target="_blank" rel="noopener">🐙 GitHub</a>
+				<a class="btn" href="https://space.bilibili.com/1629601067" target="_blank" rel="noopener">🎬 Bilibili</a>
+				<a class="btn" href="#contact">✉️ 联系我</a>
 			</div>
 		</div>
-		<!-- 版权 -->
-		<footr>
-			<div class="container con">
-				<div class="col-md-12">
-					<p>created in 2025&nbsp;<span class="glyphicon glyphicon-user"></span><a href="/">Yonom1</a></p>
-				</div>
-			</div>
-		</footr>
-	<script src="http://mat1.gtimg.com/libs/jquery/1.12.0/jquery.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<figure class="avatar-card">
+			<img src="img/logo.jpg" alt="个人头像"/>
+			<figcaption class="badge">Always Learning ↗</figcaption>
+		</figure>
+	</section>
 
-	</body>
+	<section id="about" class="section">
+		<h2 class="sec-title">🙋 关于我</h2>
+		<div class="grid">
+			<div class="card" style="grid-column: span 7;">
+				<h3>📖 简介</h3>
+				<p>我是一个热爱学习与分享的人，正在探索 <strong>目标检测</strong>、<strong>3D Vision</strong>、<strong>具身智能</strong>。欢迎通过下方方式联系交流。</p>
+			</div>
+			<div class="card" style="grid-column: span 5;">
+				<h3>🗂️ 资料卡</h3>
+				<div class="kv"><div class="k">姓名</div><div>刘晓睿</div></div>
+				<div class="kv"><div class="k">学校/专业</div><div>南京大学 · 智能科学与技术</div></div>
+				<div class="kv"><div class="k">家乡</div><div>中国·山东·滨州·阳信</div></div>
+				<div class="kv"><div class="k">目标</div><div>AI 算法工程师（北京）</div></div>
+			</div>
+		</div>
+	</section>
+
+	<section id="projects" class="section">
+		<h2 class="sec-title">📂 项目</h2>
+		<div class="grid">
+			<div class="card" style="grid-column: span 6;">
+				<div class="thumb" aria-hidden="true">示例图 / 16:9</div>
+				<h3 style="margin-top:12px;">🖼️ 示例项目 A</h3>
+				<p>这里是示例项目的描述，占位说明未来会添加真实项目。</p>
+			</div>
+			<div class="card" style="grid-column: span 6;">
+				<div class="thumb" aria-hidden="true">示例图 / 16:9</div>
+				<h3 style="margin-top:12px;">🔍 示例项目 B</h3>
+				<p>这里是第二个示例项目的描述，用于保持页面布局完整。</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="contact" class="section">
+		<h2 class="sec-title">📧 联系我</h2>
+		<div class="grid">
+			<div class="card" style="grid-column: span 7;">
+				<h3>✉️ 邮箱</h3>
+				<p>
+					<a href="mailto:lxr209042@126.com">lxr209042@126.com</a><br>
+					<a href="mailto:231880326@smail.nju.edu.cn">231880326@smail.nju.edu.cn</a>
+				</p>
+				<h3 style="margin-top:10px;">🌐 社交</h3>
+				<p class="social">
+					<a href="https://github.com/Yonom1" target="_blank" rel="noopener" aria-label="GitHub: Yonom1">
+						<span class="ico" aria-hidden="true">
+							<!-- GitHub Mark -->
+							<svg viewBox="0 0 16 16" role="img" focusable="false"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.01 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+						</span>
+						<span>GitHub · @Yonom1</span>
+					</a><br/>
+					<a href="https://space.bilibili.com/1629601067" target="_blank" rel="noopener" aria-label="Bilibili: 得闲饮茶362">
+						<span class="ico" aria-hidden="true">
+							<!-- Bilibili TV-like icon -->
+							<svg viewBox="0 0 24 24" role="img" focusable="false"><path d="M7.5 3.5 9.7 6H6a3 3 0 0 0-3 3v7.5A3.5 3.5 0 0 0 6.5 20h11A3.5 3.5 0 0 0 21 16.5V9a3 3 0 0 0-3-3h-3.7l2.2-2.5a1 1 0 1 0-1.5-1.3L12 5 9 2.2A1 1 0 0 0 7.5 3.5ZM5 9a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v7.5c0 .83-.67 1.5-1.5 1.5h-11C5.67 18 5 17.33 5 16.5V9Zm3.25 2.25a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Zm7.5 0a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/></svg>
+						</span>
+						<span>Bilibili · 得闲饮茶362</span>
+					</a>
+				</p>
+			</div>
+			<div class="card" style="grid-column: span 5;">
+				<h3>📎 更多</h3>
+				<p>博客：<a href="introduce.html" target="_blank" rel="noopener">introduce.html</a><br/>主页镜像：<a href="https://yonom1.github.io" target="_blank" rel="noopener">yonom1.github.io</a></p>
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer>
+	<div class="container"><strong>🌱 保持好奇，笃行致远。</strong></div>
+</footer>
+</body>
 </html>
