@@ -1,95 +1,179 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-		<link rel="stylesheet" href="css/bootstrap.min.css" >
-		<link rel="stylesheet" href="css/index.css">
-		<link rel="icon" href="logo.png">
-		<title>Yonom1 的个人主页 - yonom1.github.io</title>
-	</head>
-	<body>
-		<div class="ls"></div>
-		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-					<!-- 按钮  data-toggle="collapse"-->
-					<button class="navbar-toggle"  data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- LOGO -->
-					<a href="/" class="navbar-brand">Yonom1 的个人主页</a>
-				</div>
-				<!-- 导航 -->
-				<div class="collapse navbar-collapse" aria-expanded="false">
-					<ul class="nav navbar-nav navbar-right" >
-						<li class="active"><a href="index.html">我的博客</a></li>
-<!--						<li>-->
-<!--							<a href="#" type="button" data-toggle="dropdown">前端开发<span class="caret"></span></a>-->
-<!--							<ul class="dropdown-menu">-->
-<!--								<li><a href="#">Admin管理后台</a></li>-->
-<!--								<li><a href="#">我的导航页面</a></li>-->
-<!--							</ul>-->
-<!--						</li>-->
-<!--						<li><a href="/">个人主页网</a></li>-->
-<!--						<li><a href="/">问题反馈</a></li>-->
-<!--						<li><a href="/">登录</a></li>-->
-					</ul>
-				</div>
-			</div>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>📝 博客 · Yonom1</title>
+	<meta name="description" content="Yonom1 · 博客列表与分类" />
+	<meta name="color-scheme" content="light dark" />
+	<link rel="icon" href="logo.png" />
+	<style>
+		:root {
+			--bg: #0b0b0b;
+			--card: #121212;
+			--text: #f8f8f8;
+			--muted: #c9c9c9;
+			--brand: #7BA05B;    /* 主色：绿茶色 */
+			--brand-2: #5C8A47;  /* 次色：深茶绿 */
+			--ring: rgba(123, 160, 91, .35);
+			--shadow: 0 10px 30px rgba(0,0,0,.35);
+			--radius: 16px;
+			--maxw: 1100px;
+		}
+		@media (prefers-color-scheme: light) {
+			:root {
+				--bg: #f6fff2;
+				--card: #f2faec;
+				--text: #1a1a1a;
+				--muted: #5a5a5a;
+				--shadow: 0 10px 30px rgba(0,0,0,.08);
+			}
+		}
+		* { box-sizing: border-box; }
+		body {
+			margin: 0;
+			font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+			color: var(--text);
+			background: radial-gradient(1200px 1200px at 80% -10%, rgba(123,160,91,.12), transparent 60%),
+			radial-gradient(900px 900px at 10% 10%, rgba(92,138,71,.10), transparent 60%),
+			var(--bg);
+		}
+		a { color: inherit; text-decoration: none; }
+		.container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+
+		/* 顶部导航，与首页一致 */
+		.nav { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(140%) blur(10px); background: color-mix(in oklab, var(--bg) 85%, transparent); border-bottom: 1px solid color-mix(in oklab, var(--brand) 25%, transparent); }
+		.nav-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+		.brand { display:flex; align-items:center; gap:12px; font-weight:700; }
+		.brand .dot { width:10px; height:10px; border-radius:50%; background: linear-gradient(90deg, var(--brand), var(--brand-2)); box-shadow: 0 0 0 4px var(--ring); }
+		.nav-links { display:flex; gap:18px; }
+		.btn { display:inline-flex; align-items:center; gap:6px; padding:10px 14px; border-radius:999px; border:1px solid color-mix(in oklab, var(--brand) 45%, transparent); background: color-mix(in oklab, var(--card) 80%, transparent); box-shadow: var(--shadow); }
+		.btn:hover { transform: translateY(-1px); }
+
+		/* 页面头部 */
+		.page-head { display:flex; align-items:center; gap:18px; padding: 28px 0 12px; }
+		.page-head .logo { width:56px; height:56px; border-radius:14px; overflow:hidden; border: 1px solid color-mix(in oklab, var(--brand) 25%, transparent); box-shadow: var(--shadow); }
+		.page-head .logo img { width:100%; height:100%; object-fit: cover; }
+		.page-title { font-size: clamp(26px, 3.2vw, 36px); font-weight: 800; margin: 0; }
+		.page-sub { color: var(--muted); margin: 4px 0 0; }
+
+		/* 分类区 */
+		.section { padding: 6px 0 28px; }
+		.sec-title { font-size: 20px; font-weight: 800; margin: 0 0 14px; }
+		.grid { display:grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
+
+		.card { grid-column: span 6; border-radius: var(--radius); padding: 18px; background: var(--card); border:1px solid color-mix(in oklab, var(--brand) 18%, transparent); box-shadow: var(--shadow); }
+		.card h3 { margin: 0 0 6px; }
+		.muted { color: var(--muted); }
+
+		/* 列表项 */
+		.post { display:flex; gap:14px; padding:12px; border:1px solid color-mix(in oklab, var(--brand) 22%, transparent); border-radius: 12px; background: color-mix(in oklab, var(--card) 96%, transparent); }
+		.post:hover { transform: translateY(-1px); }
+		.dot { width:10px; height:10px; margin-top:8px; border-radius:50%; background: linear-gradient(90deg, var(--brand), var(--brand-2)); box-shadow: 0 0 0 6px var(--ring); flex: 0 0 auto; }
+		.post-title { font-weight: 700; }
+		.post-meta { color: var(--muted); font-size: 13px; margin-top: 2px; }
+
+		footer { margin:40px 0 10px; color:var(--muted); font-size:14px; display:flex; justify-content:center; }
+
+		@media (max-width: 900px) { .card { grid-column: span 12; } }
+	</style>
+</head>
+<body>
+<!-- 顶部导航（统一） -->
+<header class="nav">
+	<div class="container nav-inner">
+		<a class="brand" href="index.html"><span class="dot"></span><span>🍵 Yonom1 · 个人主页</span></a>
+		<nav class="nav-links">
+			<a class="btn" href="index.html#about">🙋 关于</a>
+			<a class="btn" href="index.html#projects">📂 项目</a>
+			<a class="btn" href="#top">📝 博客</a>
+			<a class="btn" href="links.html">🔗 友情链接</a>
+			<a class="btn" href="index.html#contact">📧 联系</a>
 		</nav>
-		<!-- 内容 -->
-		<div class="container pad">
-			<div class="row">
-				<div class="col-md-12 baron">
-					<img src="img/logo.jpg" class="img-responsive nat">
-					<h1>刘晓睿</h1>
-					<p>https://yonom1.github.io</p>
+	</div>
+</header>
 
+<main class="container" id="top">
+	<!-- 页头 -->
+	<section class="page-head" aria-labelledby="blog-title">
+		<div class="logo" aria-hidden="true"><img src="img/logo.jpg" alt="logo"></div>
+		<div>
+			<h1 id="blog-title" class="page-title">📝 博客</h1>
+			<p class="page-sub">记录学习与实践的碎片：论文阅读、实现笔记、问题小记等。</p>
+		</div>
+	</section>
+
+	<!-- 分类（根据现有内容 + 占位） -->
+	<section class="section" aria-labelledby="sec-cats">
+		<h2 class="sec-title" id="sec-cats">🗂️ 分类</h2>
+		<div class="grid">
+			<!-- 人物志：来自现有页面 -->
+			<div class="card">
+				<h3>👤 人物志 <span class="muted">(2)</span></h3>
+				<div class="post" style="margin-top:10px;">
+					<div class="dot" aria-hidden="true"></div>
+					<div>
+						<div class="post-title"><a href="aboutme/whyYonom1.html">🍵 我为什么叫 Yonom1？</a></div>
+						<div class="post-meta">更新：2025-09-01 · 人物志</div>
+					</div>
 				</div>
-				<div class="col-md-12">
-					<div class="page-header">
-						<ul class="nav nav-tabs">
-							<li>
-								<a href="index.html">个人简介</a>
-							</li>
-							<li class="active">
-								<a href="introduce.html">博客</a>
-							</li>
+				<div class="post" style="margin-top:10px;">
+					<div class="dot" aria-hidden="true"></div>
+					<div>
+						<div class="post-title"><a href="https://www.notion.so/10779cb32bfa80a6ac98c6c754fbdd29" target="_blank" rel="noopener">📄 我的简历（暂未公开）</a></div>
+						<div class="post-meta">外部：Notion · 人物志</div>
+					</div>
+				</div>
+				<p style="margin-top:10px;"><a class="btn" href="aboutme.html">➡️ 查看该分类</a></p>
+			</div>
 
-						</ul>
-						<table class="table">
-							<tbody>
-								<tr>
-									<td colspan="2">
-										<p>
-											<a href="aboutme.html" class="btn btn-block custom-btn">
-												<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-												人物志 (2)
-											</a>
-										</p>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+			<!-- 其他分类用占位 -->
+			<div class="card">
+				<h3>🧪 实验与实现 <span class="muted">(占位)</span></h3>
+				<div class="post" style="margin-top:10px;">
+					<div class="dot" aria-hidden="true"></div>
+					<div>
+						<div class="post-title"><a href="#">Pointrix 渲染管线小结（占位）</a></div>
+						<div class="post-meta">预计：TBD · 3D Vision</div>
+					</div>
+				</div>
+				<div class="post" style="margin-top:10px;">
+					<div class="dot" aria-hidden="true"></div>
+					<div>
+						<div class="post-title"><a href="#">ReLoCLNet 训练问题排查（占位）</a></div>
+						<div class="post-meta">预计：TBD · 检索/多模态</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</section>
 
-		<!-- 版权 -->
-		<footr>
-			<div class="container con">
-				<div class="col-md-12">
-					<p>created in 2025&nbsp;<span class="glyphicon glyphicon-user"></span><a href="/">Yonom1</a></p>
+	<!-- 最新（基于现有 + 占位） -->
+	<section class="section" aria-labelledby="sec-latest">
+		<h2 class="sec-title" id="sec-latest">🆕 最新</h2>
+		<div class="grid">
+			<div class="card" style="grid-column: span 12;">
+				<div class="post">
+					<div class="dot" aria-hidden="true"></div>
+					<div>
+						<div class="post-title"><a href="aboutme/whyYonom1.html">🍵 我为什么叫 Yonom1？</a></div>
+						<div class="post-meta">2025-09-01 · 人物志</div>
+					</div>
+				</div>
+				<div class="post" style="margin-top:12px;">
+					<div class="dot" aria-hidden="true"></div>
+					<div>
+						<div class="post-title"><a href="#">如何把“茶色”做得不俗（占位）</a></div>
+						<div class="post-meta">TBD · 前端/设计</div>
+					</div>
 				</div>
 			</div>
-		</footr>
-	<script src="http://mat1.gtimg.com/libs/jquery/1.12.0/jquery.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		</div>
+	</section>
+</main>
 
-	</body>
+<footer>
+	<div class="container">🌱 <strong>保持好奇，笃行致远。</strong> · <a href="index.html">返回主页</a></div>
+</footer>
+</body>
 </html>

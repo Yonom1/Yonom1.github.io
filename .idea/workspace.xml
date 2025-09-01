@@ -21,11 +21,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="904ffc43-3b18-4396-93b7-f63a9c172c2c" name="更改" comment="add github and bilibili links">
+    <list default="true" id="904ffc43-3b18-4396-93b7-f63a9c172c2c" name="更改" comment="社交账号勘误">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/links/Pengjin2005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/links/TenofHearts.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/links/byml.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aboutme.html" beforeDir="false" afterPath="$PROJECT_DIR$/aboutme.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aboutme/whyYonom1.html" beforeDir="false" afterPath="$PROJECT_DIR$/aboutme/whyYonom1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/introduce.html" beforeDir="false" afterPath="$PROJECT_DIR$/introduce.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +80,7 @@
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Ccode/CPL_PROJECT2&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -111,6 +112,10 @@
       <workItem from="1744799025055" duration="6163000" />
       <workItem from="1744805741483" duration="379000" />
       <workItem from="1744815979040" duration="16000" />
+      <workItem from="1745596032541" duration="5000" />
+      <workItem from="1746449801691" duration="58000" />
+      <workItem from="1746518607683" duration="90000" />
+      <workItem from="1756723367974" duration="3133000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -240,7 +245,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744806108582</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="社交账号勘误">
+      <option name="closed" value="true" />
+      <created>1746518642677</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1746518642677</updated>
+    </task>
+    <task id="LOCAL-00018" summary="message">
+      <option name="closed" value="true" />
+      <created>1756725653746</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1756725653746</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +308,7 @@
     <MESSAGE value="未公开的简历" />
     <MESSAGE value="add links" />
     <MESSAGE value="add github and bilibili links" />
-    <option name="LAST_COMMIT_MESSAGE" value="add github and bilibili links" />
+    <MESSAGE value="社交账号勘误" />
+    <option name="LAST_COMMIT_MESSAGE" value="社交账号勘误" />
   </component>
 </project>
