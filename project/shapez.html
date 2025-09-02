@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🏭 类异形工厂 游戏</title>
+  <meta name="description" content="类异形工厂 游戏 — 独立开发的第一个较大项目，Qt 自学，助教评分96分，B站获得较好反响。" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="../logo.png" />
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --card: #121212;
+      --text: #f8f8f8;
+      --muted: #c9c9c9;
+      --brand: #7BA05B;
+      --brand-2: #5C8A47;
+      --ring: rgba(123,160,91,.35);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --maxw: 1100px;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f6fff2;
+        --card: #f2faec;
+        --text: #1a1a1a;
+        --muted: #5a5a5a;
+        --shadow: 0 10px 30px rgba(0,0,0,.08);
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color: var(--text);
+      background: radial-gradient(1200px 1200px at 80% -10%, rgba(123,160,91,.12), transparent 60%),
+      radial-gradient(900px 900px at 10% 10%, rgba(92,138,71,.10), transparent 60%),
+      var(--bg);
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+
+    /* 导航 */
+    .nav { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(140%) blur(10px); background: color-mix(in oklab, var(--bg) 85%, transparent); border-bottom: 1px solid color-mix(in oklab, var(--brand) 25%, transparent); }
+    .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:700; }
+    .brand .dot { width:10px; height:10px; border-radius:50%; background: linear-gradient(90deg, var(--brand), var(--brand-2)); box-shadow: 0 0 0 4px var(--ring); }
+    .nav-links { display:flex; gap:18px; }
+    .btn { display:inline-flex; align-items:center; gap:6px; padding:10px 14px; border-radius:999px; border:1px solid color-mix(in oklab, var(--brand) 45%, transparent); background: color-mix(in oklab, var(--card) 80%, transparent); box-shadow: var(--shadow); }
+    .btn:hover { transform: translateY(-1px); }
+
+    /* Hero */
+    .hero { display:grid; grid-template-columns: 1.1fr .9fr; gap:28px; align-items:center; padding: 40px 0 24px; }
+    .hero-card { background: var(--card); border: 1px solid color-mix(in oklab, var(--brand) 20%, transparent); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); }
+    .title { font-size: clamp(28px, 4vw, 44px); font-weight:800; margin:0 0 12px; }
+    .subtitle { color: var(--muted); font-size: clamp(15px, 1.6vw, 18px); line-height:1.6; }
+
+    /* Section */
+    .section { padding:30px 0; }
+    .sec-title { font-size:22px; font-weight:800; margin-bottom:14px; }
+
+    .grid { display:grid; grid-template-columns: repeat(12, 1fr); gap:18px; }
+    .card { grid-column: span 12; border-radius: var(--radius); padding:20px; background: var(--card); border:1px solid color-mix(in oklab, var(--brand) 18%, transparent); box-shadow: var(--shadow); }
+
+    .screenshot { width:100%; border-radius:12px; box-shadow: var(--shadow); }
+
+    footer { margin:40px 0 10px; color:var(--muted); font-size:14px; display:flex; justify-content:center; }
+
+    @media (max-width: 900px){ .hero{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html"><span class="dot"></span><span>🍵 Yonom1 · 个人主页</span></a>
+    <nav class="nav-links">
+      <a class="btn" href="../index.html#about">🙋 关于</a>
+      <a class="btn" href="../index.html#projects">📂 项目</a>
+      <a class="btn" href="../index.html#contact">📧 联系</a>
+      <a class="btn" href="../introduce.html">📝 博客</a>
+      <a class="btn" href="../links.html">🔗 友情链接</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-card">
+      <h1 class="title">🏭 类异形工厂 游戏</h1>
+      <p class="subtitle">独立开发的第一个较大项目，基于 Qt 自学完成，课程助教评分 <strong>96 分</strong>。</p>
+      <p style="margin-top:18px;">
+        <a href="https://github.com/Yonom1/Shapez" target="_blank" rel="noopener" class="btn">🌐 项目仓库（暂未开源）</a>
+      </p>
+    </div>
+    <figure>
+      <img src="../img/shapez.png" alt="类异形工厂 游戏截图" class="screenshot">
+    </figure>
+  </section>
+
+  <!-- 简介 -->
+  <section class="section">
+    <h2 class="sec-title">📖 项目简介</h2>
+    <div class="card">
+      <p>类异形工厂 游戏是我在大一暑假期间独立完成的一个较大规模项目。通过该项目，我学习并实践了 Qt 技术，熟悉了 GUI 程序设计的流程。</p>
+      <ul>
+        <li>项目完成度高，课程助教评分 <strong>96 分</strong>。</li>
+        <li>锻炼了大型项目的组织能力。</li>
+        <li>将项目做成视频上传至 B 站，获得较好反响。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 视频与反响 -->
+  <section class="section">
+    <h2 class="sec-title">🎬 视频与反响</h2>
+    <div class="grid">
+      <div class="card">
+        <p>独立剪辑课程项目介绍视频并发布至 B 站，最高播放量 <strong>3200+</strong>，最高获赞 <strong>57</strong>。</p>
+        <p>视频链接：<a href="https://www.bilibili.com/video/BV1rL31eSEVM/?spm_id_from=333.1387.homepage.video_card.click" target="_blank" rel="noopener">▶️ 什么？！大学生自学 Qt 手搓类异形工厂</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">🌱 <strong>Keep Learning, Keep Creating.</strong></div>
+</footer>
+</body>
+</html>
