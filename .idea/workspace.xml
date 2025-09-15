@@ -23,7 +23,14 @@
   <component name="ChangeListManager">
     <list default="true" id="904ffc43-3b18-4396-93b7-f63a9c172c2c" name="更改" comment="message">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aboutme.html" beforeDir="false" afterPath="$PROJECT_DIR$/aboutme.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aboutme/whyYonom1.html" beforeDir="false" afterPath="$PROJECT_DIR$/aboutme/whyYonom1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/introduce.html" beforeDir="false" afterPath="$PROJECT_DIR$/introduce.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/links.html" beforeDir="false" afterPath="$PROJECT_DIR$/links.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/project.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/njuszcs.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/njuszcs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/shapez.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/shapez.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +134,7 @@
       <workItem from="1756792465385" duration="274000" />
       <workItem from="1756793300371" duration="113000" />
       <workItem from="1756793840133" duration="46000" />
-      <workItem from="1757923937450" duration="628000" />
+      <workItem from="1757923937450" duration="3268000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -329,7 +336,23 @@
       <option name="project" value="LOCAL" />
       <updated>1756793872826</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="message">
+      <option name="closed" value="true" />
+      <created>1757924748080</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1757924748080</updated>
+    </task>
+    <task id="LOCAL-00027" summary="message">
+      <option name="closed" value="true" />
+      <created>1757924770232</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1757924770232</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
