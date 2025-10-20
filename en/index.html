@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Xiaorui Liu · Yonom1 — Personal Homepage</title>
+	<meta name="description" content="Xiaorui Liu (Yonom1) · Nanjing University · Intelligent Science and Technology · AI / 3D Vision personal homepage" />
+	<meta name="color-scheme" content="light dark" />
+	<link rel="icon" href="../logo.png" />
+	<style>
+		:root {
+			--bg: #0b0b0b;
+			--card: #121212;
+			--text: #f8f8f8;
+			--muted: #c9c9c9;
+			--brand: #7BA05B;
+			--brand-2: #5C8A47;
+			--ring: rgba(123, 160, 91, .35);
+			--shadow: 0 10px 30px rgba(0,0,0,.35);
+			--radius: 16px;
+			--maxw: 1100px;
+		}
+		@media (prefers-color-scheme: light) {
+			:root {
+				--bg: #f6fff2;
+				--card: #f2faec;
+				--text: #1a1a1a;
+				--muted: #5a5a5a;
+				--shadow: 0 10px 30px rgba(0,0,0,.08);
+			}
+		}
+		* { box-sizing: border-box; }
+		body {
+			margin: 0;
+			font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+			color: var(--text);
+			background: url('../img/bg.png') center center / cover no-repeat fixed, var(--bg);
+		}
+		a { color: inherit; text-decoration: none; }
+		.container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+
+		.nav { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(140%) blur(10px); background: color-mix(in oklab, var(--bg) 85%, transparent); border-bottom: 1px solid color-mix(in oklab, var(--brand) 25%, transparent); }
+		.nav-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+		.brand { display:flex; align-items:center; gap:12px; font-weight:700; }
+		.brand .dot { width:10px; height:10px; border-radius:50%; background: linear-gradient(90deg, var(--brand), var(--brand-2)); box-shadow: 0 0 0 4px var(--ring); }
+		.nav-links { display:flex; gap:18px; }
+		.btn { display:inline-flex; align-items:center; gap:6px; padding:10px 14px; border-radius:999px; border:1px solid color-mix(in oklab, var(--brand) 45%, transparent); background: color-mix(in oklab, var(--card) 80%, transparent); box-shadow: var(--shadow); }
+		.btn:hover { transform: translateY(-1px); }
+
+		.hero { display:grid; grid-template-columns: 1.1fr .9fr; gap:28px; align-items:center; padding: 40px 0 24px; }
+		.hero-card { background: linear-gradient(180deg, color-mix(in oklab, var(--card) 88%, transparent), color-mix(in oklab, var(--card) 100%, transparent)); border: 1px solid color-mix(in oklab, var(--brand) 20%, transparent); border-radius: calc(var(--radius) + 6px); padding: 28px; box-shadow: var(--shadow); }
+		.kicker { color: var(--brand-2); font-weight:700; letter-spacing:.18em; text-transform:uppercase; font-size:12px; }
+		.title { font-size: clamp(28px, 4vw, 44px); line-height:1.12; margin:10px 0; font-weight:800; }
+		.subtitle { color: var(--muted); font-size: clamp(15px, 1.6vw, 18px); line-height:1.7; }
+		.cta { margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; }
+
+		.avatar-card { position: relative; aspect-ratio:1/1; border-radius:22px; overflow:hidden; background:#111; border:1px solid color-mix(in oklab, var(--brand) 20%, transparent); box-shadow: var(--shadow); }
+		.avatar-card img { width:100%; height:100%; object-fit: cover; }
+		.badge { position:absolute; left:14px; bottom:14px; padding:8px 12px; border-radius:999px; font-size:13px; font-weight:700; background: linear-gradient(90deg, var(--brand), var(--brand-2)); color:#111; }
+
+		.section { padding:8px 0 40px; }
+		.sec-title { font-size:20px; font-weight:800; margin:0 0 14px; }
+		.grid { display:grid; grid-template-columns: repeat(12, 1fr); gap:18px; }
+		.card { grid-column: span 6; border-radius:var(--radius); padding:20px; background: var(--card); border:1px solid color-mix(in oklab, var(--brand) 18%, transparent); box-shadow: var(--shadow); }
+		.card p { margin:8px 0 0; color:var(--muted); line-height:1.8; }
+		.kv { display:grid; grid-template-columns: 120px 1fr; gap:8px; padding:10px 0; border-bottom:1px dashed color-mix(in oklab, var(--brand) 25%, transparent); }
+		.kv:last-child { border-bottom:0; }
+		.kv .k { color:var(--muted); }
+
+		.thumb { width:100%; aspect-ratio: 16/9; border-radius: 12px; border:1px dashed color-mix(in oklab, var(--brand) 40%, transparent); background:
+				repeating-linear-gradient(135deg, color-mix(in oklab, var(--brand) 22%, transparent) 0 12px, transparent 12px 24px);
+			display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:14px; }
+
+		.social a { display:inline-flex; align-items:center; gap:8px; margin: 6px 0; }
+		.ico { width: 18px; height: 18px; display:inline-block; }
+		.ico svg { width:100%; height:100%; fill: currentColor; }
+
+		footer { margin:40px 0 10px; color:var(--muted); font-size:14px; display:flex; justify-content:center; }
+
+		@media (max-width: 900px){ .hero{grid-template-columns:1fr;} .card{grid-column:span 12;} }
+
+		.prof-link {
+			color: #1a73e8;
+			text-decoration: underline dashed;
+			text-underline-offset: 3px;
+		}
+		.prof-link:hover { color: #0c47a1; }
+	</style>
+</head>
+<body>
+<header class="nav">
+	<div class="container nav-inner">
+		<a class="brand" href="#top"><span class="dot"></span><span>🍵 Yonom1 · Personal Homepage</span></a>
+		<nav class="nav-links">
+			<a class="btn" href="#about">🙋 About</a>
+			<a class="btn" href="project.html">📂 Projects</a>
+			<a class="btn" href="#contact">📧 Contact</a>
+			<a class="btn" href="introduce.html">📝 Blog</a>
+			<a class="btn" href="links.html">🔗 Links</a>
+			<!-- language switch back to Chinese -->
+			<a class="btn" href="../index.html" aria-label="Chinese version">ZH</a>
+		</nav>
+	</div>
+</header>
+
+<main class="container" id="top">
+	<section class="hero">
+		<div class="hero-card">
+			<div class="kicker">AI · 3D Vision</div>
+			<h1 class="title">Xiaorui Liu (Yonom1) 🍵</h1>
+			<p class="subtitle">
+				I am an undergraduate student at Nanjing University, majoring in Intelligent Science and Technology. I currently focus on <strong>3D computer vision</strong>, supervised by
+				<a href="https://yoyo000.github.io/" target="_blank" rel="noopener" class="prof-link">Prof. Yao Yao</a>, and take interest in <strong>multimodal large models</strong> and <strong>embodied intelligence</strong>. This site hosts my projects, notes and links.
+			</p>
+
+			<div class="cta">
+				<a class="btn" href="https://github.com/Yonom1" target="_blank" rel="noopener">🐙 GitHub</a>
+				<a class="btn" href="https://space.bilibili.com/1629601067" target="_blank" rel="noopener">🎬 Bilibili</a>
+				<a class="btn" href="#contact">📧 Contact</a>
+			</div>
+		</div>
+		<figure class="avatar-card">
+			<img src="../img/logo.jpg" alt="avatar"/>
+			<figcaption class="badge">Always Learning ↗</figcaption>
+		</figure>
+	</section>
+	<div class="card" style="grid-column: span 12;">
+		<h3>🗞️ News</h3>
+		<div>TBD.</div></div>
+	</div><br><br>
+	<section id="about" class="section">
+		<h2 class="sec-title">🙋 About</h2>
+		<div class="grid">
+			<div class="card" style="grid-column: span 5;">
+				<h3>🗂️ Profile</h3>
+				<div class="kv"><div class="k">Name</div><div>Xiaorui Liu</div></div>
+				<div class="kv"><div class="k">School / Major</div><div>Nanjing University · Intelligent Science and Technology</div></div>
+				<div class="kv"><div class="k">Hometown</div><div>Dongying, Shandong, China</div></div>
+				<div class="kv"><div class="k">Goal</div><div>AI Algorithm Engineer</div></div>
+			</div>
+			<div class="card" style="grid-column: span 7;">
+				<h3>🏆 Honors</h3>
+				<div class="kv"><div class="k">2025.04</div><div>Outstanding Youth League Member (Nanjing University)</div></div>
+				<div class="kv"><div class="k">2024.11</div><div>2023–2024 People's Scholarship (Third Prize)</div></div>
+				<div class="kv"><div class="k">2024.06</div><div>Excellent Student — Freshman College (2023–2024)</div></div>
+			</div>
+			<div class="card" style="grid-column: span 12;">
+				<h3>🎓 Experience</h3>
+				<div class="kv"><div class="k">2023.9 - now</div><div>Nanjing University · School of Intelligent Science and Technology · B.Sc.</div></div>
+			</div>
+		</div>
+	</section>
+
+	<section id="projects" class="section">
+		<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+			<h2 class="sec-title">📂 Projects</h2>
+			<a href="project.html" class="btn" style="font-size:14px; padding:6px 12px;">➡️ More</a>
+		</div>
+		<div class="grid">
+			<div class="card" style="grid-column: span 6;">
+				<img src="../img/njusz.png" alt="NJUSZ-CS screenshot" class="thumb"/>
+				<h3 style="margin-top:12px;">🥘 NJUSZ-CS — Nanjing University Canteen Simulator</h3>
+				<p>
+					This project was the final assignment for the Programming Practice course. It was developed with Qt6.
+				</p>
+				<p style="margin-top:12px;">
+					<a href="project/njuszcs.html" class="btn">📖 View details</a>
+				</p>
+			</div>
+			<div class="card" style="grid-column: span 6;">
+				<img src="../img/shapez.png" alt="ShapeZ-like game screenshot" class="thumb"/>
+				<h3 style="margin-top:12px;">🏭 ShapeZ-like Factory Game</h3>
+				<p>
+					A course project from Advanced Programming (second semester). My first substantial solo project with a high completion level.
+				</p>
+				<p style="margin-top:12px;">
+					<a href="project/shapez.html" class="btn">📖 View details</a>
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="contact" class="section">
+		<h2 class="sec-title">📧 Contact</h2>
+		<div class="grid">
+			<div class="card" style="grid-column: span 7;">
+				<h3>✉️ Email</h3>
+				<p>
+					<a href="mailto:lxr209042@126.com" class="social-link" aria-label="NetEase Mail: 126.com">
+					  <span class="ico" aria-hidden="true" style="color:#d81e06">
+						<svg viewBox="0 0 24 24" role="img" focusable="false">
+						  <path d="M3 6.75A2.75 2.75 0 0 1 5.75 4h12.5A2.75 2.75 0 0 1 21 6.75v10.5A2.75 2.75 0 0 1 18.25 20H5.75A2.75 2.75 0 0 1 3 17.25V6.75Zm2.02.16 6.57 5.03c.25.19.57.19.82 0l6.57-5.03a.75.75 0 0 0-.45-1.35H5.47a.75.75 0 0 0-.45 1.35Z"/>
+						</svg>
+					  </span>
+						<span> lxr209042@126.com</span>
+					</a>
+					<br/>
+					<a href="mailto:XiaoruiLiu@smail.nju.edu.cn" class="social-link" aria-label="NJU Mail: smail.nju.edu.cn">
+					  <span class="ico" aria-hidden="true" style="color:#6b2e82">
+						<svg viewBox="0 0 24 24" role="img" focusable="false">
+						  <path d="M12 2c.3 0 .6.06.88.19l7.12 3.2v6.11c0 5.38-4.52 8.75-8 9.99-3.48-1.24-8-4.61-8-9.99V5.39l7.12-3.2C11.4 2.06 11.7 2 12 2Z"/>
+						  <path d="M7.5 9.75h9v1.5h-9v-1.5Zm1.5 3h6v1.25h-6V12.75Zm2.25 2.75h1.5V18h-1.5v-2.5Z" fill="currentColor"/>
+						</svg>
+					  </span>
+						<span> XiaoruiLiu@smail.nju.edu.cn</span>
+					</a>
+				</p>
+				<h3 style="margin-top:10px;">🌐 Social</h3>
+				<p class="social">
+					<a href="https://github.com/Yonom1" target="_blank" rel="noopener" aria-label="GitHub: Yonom1">
+						<span class="ico" aria-hidden="true">
+							<svg viewBox="0 0 16 16" role="img" focusable="false"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.01 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+						</span>
+						<span>GitHub · @Yonom1</span>
+					</a><br/>
+					<a href="https://space.bilibili.com/1629601067" target="_blank" rel="noopener" aria-label="Bilibili: channel">
+						<span class="ico" aria-hidden="true">
+							<svg viewBox="0 0 24 24" role="img" focusable="false"><path d="M7.5 3.5 9.7 6H6a3 3 0 0 0-3 3v7.5A3.5 3.5 0 0 0 6.5 20h11A3.5 3.5 0 0 0 21 16.5V9a3 3 0 0 0-3-3h-3.7l2.2-2.5a1 1 0 1 0-1.5-1.3L12 5 9 2.2A1 1 0 0 0 7.5 3.5ZM5 9a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v7.5c0 .83-.67 1.5-1.5 1.5h-11C5.67 18 5 17.33 5 16.5V9Zm3.25 2.25a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Zm7.5 0a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/></svg>
+						</span>
+						<span>Bilibili · 得闲饮茶362</span>
+					</a>
+				</p>
+			</div>
+			<div class="card" style="grid-column: span 5;">
+				<h3>📎 More</h3>
+				<p>Blog: <a href="introduce.html">introduce.html</a><br/>Site mirror: <a href="https://yonom1.github.io" target="_blank" rel="noopener">yonom1.github.io</a></p>
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer>
+	<div class="container"><strong>🌱 Stay hungry, stay foolish.</strong></div>
+</footer>
+</body>
+</html>

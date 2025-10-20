@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>📂 项目 · Yonom1</title>
-  <meta name="description" content="Yonom1 · 项目一览" />
+  <title>📂 Projects · Yonom1</title>
+  <meta name="description" content="Yonom1 · Projects overview" />
   <meta name="color-scheme" content="light dark" />
-  <link rel="icon" href="logo.png" />
+  <link rel="icon" href="../logo.png" />
   <style>
     :root{
       --bg:#0b0b0b; --card:#121212; --text:#f8f8f8; --muted:#c9c9c9;
@@ -18,14 +18,13 @@
     }
     *{box-sizing:border-box}
     body{
-      margin:0; font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+      margin:0; font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
       color:var(--text);
-      background: url('img/bg.png') center center / cover no-repeat fixed, var(--bg);
+      background: url('../img/bg.png') center center / cover no-repeat fixed, var(--bg);
     }
     a{color:inherit; text-decoration:none}
     .container{max-width:var(--maxw); margin:0 auto; padding:24px}
 
-    /* 顶部导航 */
     .nav{position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(10px);
       background:color-mix(in oklab, var(--bg) 85%, transparent);
       border-bottom:1px solid color-mix(in oklab, var(--brand) 25%, transparent);}
@@ -38,7 +37,6 @@
       background:color-mix(in oklab, var(--card) 80%, transparent); box-shadow:var(--shadow)}
     .btn:hover{transform:translateY(-1px)}
 
-    /* 页头 */
     .page-head{display:flex; align-items:center; gap:18px; padding:28px 0 12px}
     .page-head .logo{width:56px; height:56px; border-radius:14px; overflow:hidden;
       border:1px solid color-mix(in oklab, var(--brand) 25%, transparent); box-shadow:var(--shadow)}
@@ -46,7 +44,6 @@
     .page-title{font-size:clamp(26px,3.2vw,36px); font-weight:800; margin:0}
     .page-sub{color:var(--muted); margin:4px 0 0}
 
-    /* 列表卡片 */
     .list{display:grid; gap:16px; padding:10px 0 32px}
     .rowcard{display:grid; grid-template-columns: 320px 1fr; gap:16px; align-items:center;
       padding:14px; border-radius:var(--radius); background:var(--card);
@@ -69,76 +66,59 @@
 <body>
 <header class="nav">
   <div class="container nav-inner">
-    <a class="brand" href="index.html"><span class="dot"></span><span>🍵 Yonom1 · 个人主页</span></a>
+    <a class="brand" href="index.html"><span class="dot"></span><span>🍵 Yonom1 · Personal Homepage</span></a>
     <nav class="nav-links">
-      <a class="btn" href="index.html#about">🙋 关于我</a>
-      <a class="btn" href="index.html#projects">📂 项目</a>
-      <a class="btn" href="index.html#contact">📧 联系我</a>
-      <a class="btn" href="introduce.html">📝 博客</a>
-      <a class="btn" href="links.html">🔗 友情链接</a>
-
-      <!-- language switch -->
-      <a class="btn" href="en/project.html" aria-label="English version">EN</a>
+      <a class="btn" href="index.html#about">🙋 About</a>
+      <a class="btn" href="index.html#projects">📂 Projects</a>
+      <a class="btn" href="index.html#contact">📧 Contact</a>
+      <a class="btn" href="introduce.html">📝 Blog</a>
+      <a class="btn" href="links.html">🔗 Links</a>
+      <a class="btn" href="../project.html" aria-label="Chinese version">ZH</a>
     </nav>
   </div>
 </header>
 
 <main class="container">
   <section class="page-head">
-    <div class="logo" aria-hidden="true"><img src="img/logo.jpg" alt="logo"></div>
+    <div class="logo" aria-hidden="true"><img src="../img/logo.jpg" alt="logo"></div>
     <div>
-      <h1 class="page-title">📂 项目</h1>
-      <p class="page-sub">按时间倒序列出我做过的项目；点击任意卡片可查看项目主页。</p>
+      <h1 class="page-title">📂 Projects</h1>
+      <p class="page-sub">Projects listed in reverse chronological order; click any card to view the project homepage.</p>
     </div>
   </section>
 
   <section class="list">
-    <!-- 3. 占位示例（可删除/复制扩展） -->
-<!--    <a class="rowcard" href="#">-->
-<!--      <img class="thumb" src="img/projects/placeholder.jpg" alt="占位项目封面">-->
-<!--      <div>-->
-<!--        <h3 class="rc-title">✨ 示例项目（占位）</h3>-->
-<!--        <p class="rc-desc">用于后续新增项目的占位描述。替换封面、标题与简介，并将链接指向你的新项目主页。</p>-->
-<!--        <div class="meta">类型：占位 · 状态：待补充</div>-->
-<!--      </div>-->
-<!--    </a>-->
-    <!-- 1. NJUSZ-CS -->
     <a class="rowcard" href="project/njuszcs.html">
-      <img class="thumb" src="img/njusz.png" alt="NJUSZ-CS 封面">
+      <img class="thumb" src="../img/njusz.png" alt="NJUSZ-CS cover">
       <div>
-        <h3 class="rc-title">🥘 NJUSZ-CS — 南苏食堂模拟器</h3>
+        <h3 class="rc-title">🥘 NJUSZ-CS — Nanjing University Canteen Simulator</h3>
         <p class="rc-desc">
-          南京大学智科《程序设计实训》课程大作业，采用 Qt6 开发的小组项目。玩家扮演“食堂经理”，进行经营与事件处理。
-          课程评分 <strong>94.2 分</strong>，并制作介绍视频获得良好反馈。
+          Final project for the Programming Practice course at the School of Intelligent Science and Technology, Nanjing University. Developed with Qt6 as a team project. Players take the role of "canteen manager" to run the business and handle various events.
+          Course score: <strong>94.2</strong>; produced an introduction video that received positive feedback.
         </p>
-        <div class="meta">类型：课程项目</div>
+        <div class="meta">Type: Course Project</div>
       </div>
     </a>
 
-    <!-- 2. 类异形工厂 游戏 -->
     <a class="rowcard" href="project/shapez.html">
-      <img class="thumb" src="img/shapez.png" alt="类异形工厂 游戏封面">
+      <img class="thumb" src="../img/shapez.png" alt="ShapeZ-like game cover">
       <div>
-        <h3 class="rc-title">🏭 类异形工厂 游戏</h3>
+        <h3 class="rc-title">🏭 ShapeZ-like Factory Game</h3>
         <p class="rc-desc">
-          大一暑期自学 Qt 独立完成的第一个较大项目，完成度高。锻炼了大型项目的组织与实现能力。
-          课程助教评分 <strong>96 分</strong>；项目介绍视频在 B 站最高播放 <strong>3200+</strong>，最高获赞 <strong>57</strong>。
+          My first substantial solo project completed independently during the summer of my freshman year by self-learning Qt. High completion level, which trained my ability to organize and implement large projects.
+          TA score: <strong>96</strong>; the project introduction video reached <strong>3200+</strong> views and <strong>57</strong> likes on Bilibili.
         </p>
-        <div class="meta">类型：课程项目</div>
+        <div class="meta">Type: Course Project</div>
       </div>
     </a>
-
-
   </section>
   <div class="container" style="text-align:center; margin:20px 0;">
-  <a href="index.html" class="btn">🏠 返回主页</a>
+  <a href="index.html" class="btn">🏠 Back to Home</a>
   </div>
 </main>
 
-
-
 <footer>
-  <div class="container">🌱 <strong>保持好奇，笃行致远。</strong></div>
+  <div class="container">🌱 <strong>Stay hungry, stay foolish.</strong></div>
 </footer>
 </body>
 </html>

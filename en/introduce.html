@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>📝 博客 · Yonom1</title>
-	<meta name="description" content="Yonom1 · 博客列表与分类" />
+	<title>📝 Blog · Yonom1</title>
+	<meta name="description" content="Yonom1 · Blog list and categories" />
 	<meta name="color-scheme" content="light dark" />
-	<link rel="icon" href="logo.png" />
+	<link rel="icon" href="../logo.png" />
 	<style>
 		:root {
 			--bg: #0b0b0b;
 			--card: #121212;
 			--text: #f8f8f8;
 			--muted: #c9c9c9;
-			--brand: #7BA05B;    /* 主色：绿茶色 */
-			--brand-2: #5C8A47;  /* 次色：深茶绿 */
+			--brand: #7BA05B;
+			--brand-2: #5C8A47;
 			--ring: rgba(123, 160, 91, .35);
 			--shadow: 0 10px 30px rgba(0,0,0,.35);
 			--radius: 16px;
@@ -32,14 +32,13 @@
 		* { box-sizing: border-box; }
 		body {
 			margin: 0;
-			font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+			font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 			color: var(--text);
-			background: url('img/bg.png') center center / cover no-repeat fixed, var(--bg);
+			background: url('../img/bg.png') center center / cover no-repeat fixed, var(--bg);
 		}
 		a { color: inherit; text-decoration: none; }
 		.container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
 
-		/* 顶部导航，与首页一致 */
 		.nav { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(140%) blur(10px); background: color-mix(in oklab, var(--bg) 85%, transparent); border-bottom: 1px solid color-mix(in oklab, var(--brand) 25%, transparent); }
 		.nav-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
 		.brand { display:flex; align-items:center; gap:12px; font-weight:700; }
@@ -48,14 +47,12 @@
 		.btn { display:inline-flex; align-items:center; gap:6px; padding:10px 14px; border-radius:999px; border:1px solid color-mix(in oklab, var(--brand) 45%, transparent); background: color-mix(in oklab, var(--card) 80%, transparent); box-shadow: var(--shadow); }
 		.btn:hover { transform: translateY(-1px); }
 
-		/* 页面头部 */
 		.page-head { display:flex; align-items:center; gap:18px; padding: 28px 0 12px; }
 		.page-head .logo { width:56px; height:56px; border-radius:14px; overflow:hidden; border: 1px solid color-mix(in oklab, var(--brand) 25%, transparent); box-shadow: var(--shadow); }
 		.page-head .logo img { width:100%; height:100%; object-fit: cover; }
 		.page-title { font-size: clamp(26px, 3.2vw, 36px); font-weight: 800; margin: 0; }
 		.page-sub { color: var(--muted); margin: 4px 0 0; }
 
-		/* 分类区 */
 		.section { padding: 6px 0 28px; }
 		.sec-title { font-size: 20px; font-weight: 800; margin: 0 0 14px; }
 		.grid { display:grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
@@ -64,7 +61,6 @@
 		.card h3 { margin: 0 0 6px; }
 		.muted { color: var(--muted); }
 
-		/* 列表项 */
 		.post { display:flex; gap:14px; padding:12px; border:1px solid color-mix(in oklab, var(--brand) 22%, transparent); border-radius: 12px; background: color-mix(in oklab, var(--card) 96%, transparent); }
 		.post:hover { transform: translateY(-1px); }
 		.dot { width:10px; height:10px; margin-top:8px; border-radius:50%; background: linear-gradient(90deg, var(--brand), var(--brand-2)); box-shadow: 0 0 0 6px var(--ring); flex: 0 0 auto; }
@@ -77,98 +73,74 @@
 	</style>
 </head>
 <body>
-<!-- 顶部导航（统一） -->
 <header class="nav">
 	<div class="container nav-inner">
-		<a class="brand" href="index.html"><span class="dot"></span><span>🍵 Yonom1 · 个人主页</span></a>
+		<a class="brand" href="index.html"><span class="dot"></span><span>🍵 Yonom1 · Personal Homepage</span></a>
 		<nav class="nav-links">
-			<a class="btn" href="index.html#about">🙋 关于我</a>
-			<a class="btn" href="index.html#projects">📂 项目</a>
-			<a class="btn" href="index.html#contact">📧 联系我</a>
-			<a class="btn" href="#top">📝 博客</a>
-			<a class="btn" href="links.html">🔗 友情链接</a>
-
-			<!-- language switch -->
-			<a class="btn" href="en/introduce.html" aria-label="English version">EN</a>
-
+			<a class="btn" href="index.html#about">🙋 About</a>
+			<a class="btn" href="index.html#projects">📂 Projects</a>
+			<a class="btn" href="index.html#contact">📧 Contact</a>
+			<a class="btn" href="#top">📝 Blog</a>
+			<a class="btn" href="links.html">🔗 Links</a>
+			<a class="btn" href="../introduce.html" aria-label="Chinese version">ZH</a>
 		</nav>
 	</div>
 </header>
 
 <main class="container" id="top">
-	<!-- 页头 -->
 	<section class="page-head" aria-labelledby="blog-title">
-		<div class="logo" aria-hidden="true"><img src="img/logo.jpg" alt="logo"></div>
+		<div class="logo" aria-hidden="true"><img src="../img/logo.jpg" alt="logo"></div>
 		<div>
-			<h1 id="blog-title" class="page-title">📝 博客</h1>
-			<p class="page-sub">记录学习与实践的碎片：论文阅读、实现笔记、问题小记等。</p>
+			<h1 id="blog-title" class="page-title">📝 Blog</h1>
+			<p class="page-sub">Recording fragments of learning and practice: paper reading, implementation notes, small observations, etc.</p>
 		</div>
 	</section>
 
-	<!-- 分类（根据现有内容 + 占位） -->
 	<section class="section" aria-labelledby="sec-cats">
-		<h2 class="sec-title" id="sec-cats">🗂️ 分类</h2>
+		<h2 class="sec-title" id="sec-cats">🗂️ Categories</h2>
 		<div class="grid">
-			<!-- 人物志：来自现有页面 -->
 			<div class="card">
-				<h3>👤 人物志 <span class="muted">(2)</span></h3>
+				<h3>👤 About Me <span class="muted">(2)</span></h3>
 				<div class="post" style="margin-top:10px;">
 					<div class="dot" aria-hidden="true"></div>
 					<div>
-						<div class="post-title"><a href="aboutme/whyYonom1.html">🍵 我为什么叫 Yonom1？</a></div>
-						<div class="post-meta">更新：2025-09-01 · 人物志</div>
+						<div class="post-title"><a href="aboutme/whyYonom1.html">🍵 Why am I called Yonom1?</a></div>
+						<div class="post-meta">Updated: 2025-09-01 · About Me</div>
 					</div>
 				</div>
 				<div class="post" style="margin-top:10px;">
 					<div class="dot" aria-hidden="true"></div>
 					<div>
-						<div class="post-title"><a href="https://www.notion.so/10779cb32bfa80a6ac98c6c754fbdd29" target="_blank" rel="noopener">📄 我的简历（暂未公开）</a></div>
-						<div class="post-meta">外部：Notion · 人物志</div>
+						<div class="post-title"><a href="https://www.notion.so/10779cb32bfa80a6ac98c6c754fbdd29" target="_blank" rel="noopener">📄 My Resume (Not public yet)</a></div>
+						<div class="post-meta">External: Notion · About Me</div>
 					</div>
 				</div>
-				<p style="margin-top:10px;"><a class="btn" href="aboutme.html">➡️ 查看该分类</a></p>
+				<p style="margin-top:10px;"><a class="btn" href="aboutme.html">➡️ View category</a></p>
 			</div>
 
-			<!-- 其他分类用占位 -->
 			<div class="card">
-				<h3>🧪 技术博客 <span class="muted">(占位)</span></h3>
+				<h3>🧪 Technical Blog <span class="muted">(Placeholder)</span></h3>
 				<div class="post" style="margin-top:10px;">
 					<div class="dot" aria-hidden="true"></div>
 					<div>
-						<div class="post-title"><a href="#">（占位）</a></div>
-						<div class="post-meta">预计：TBD</div>
+						<div class="post-title"><a href="#">(Placeholder)</a></div>
+						<div class="post-meta">Expected: TBD</div>
 					</div>
 				</div>
 				<div class="post" style="margin-top:10px;">
 					<div class="dot" aria-hidden="true"></div>
 					<div>
-						<div class="post-title"><a href="#">（占位）</a></div>
-						<div class="post-meta">预计：TBD</div>
+						<div class="post-title"><a href="#">(Placeholder)</a></div>
+						<div class="post-meta">Expected: TBD</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-
-	<!-- 最新（基于现有 + 占位） -->
-<!--	<section class="section" aria-labelledby="sec-latest">-->
-<!--		<h2 class="sec-title" id="sec-latest">🆕 最新</h2>-->
-<!--		<div class="grid">-->
-<!--			<div class="card" style="grid-column: span 12;">-->
-<!--				<div class="post">-->
-<!--					<div class="dot" aria-hidden="true"></div>-->
-<!--					<div>-->
-<!--						<div class="post-title"><a href="aboutme/whyYonom1.html">🍵 我为什么叫 Yonom1？</a></div>-->
-<!--						<div class="post-meta">2025-09-01 · 人物志</div>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--			</div>-->
-<!--		</div>-->
-<!--	</section>-->
 </main>
 
 <footer>
-	<div class="container">🌱 <strong>保持好奇，笃行致远。</strong> · <a href="index.html">返回主页</a></div>
+	<div class="container">🌱 <strong>Stay hungry, stay foolish.</strong> · <a href="index.html">Back to Home</a></div>
 </footer>
 </body>
 </html>

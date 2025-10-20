@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>🥘 NJUSZ-CS — 南苏食堂模拟器</title>
-  <meta name="description" content="NJUSZ-CS 南苏食堂模拟器 — 南京大学程序设计实训课程项目，Qt6 开发" />
+  <title>🏭 ShapeZ-like Factory Game</title>
+  <meta name="description" content="ShapeZ-like Factory Game — My first substantial solo project, self-learned Qt, TA score 96, well-received on Bilibili." />
   <meta name="color-scheme" content="light dark" />
-  <link rel="icon" href="../logo.png" />
+  <link rel="icon" href="../../logo.png" />
   <style>
     :root {
       --bg: #0b0b0b;
@@ -32,14 +32,13 @@
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
       color: var(--text);
-      background: url('../img/bg.png') center center / cover no-repeat fixed, var(--bg);
+      background: url('../../img/bg.png') center center / cover no-repeat fixed, var(--bg);
     }
     a { color: inherit; text-decoration: none; }
     .container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
 
-    /* 导航 */
     .nav { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(140%) blur(10px); background: color-mix(in oklab, var(--bg) 85%, transparent); border-bottom: 1px solid color-mix(in oklab, var(--brand) 25%, transparent); }
     .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
     .brand { display:flex; align-items:center; gap:12px; font-weight:700; }
@@ -48,13 +47,11 @@
     .btn { display:inline-flex; align-items:center; gap:6px; padding:10px 14px; border-radius:999px; border:1px solid color-mix(in oklab, var(--brand) 45%, transparent); background: color-mix(in oklab, var(--card) 80%, transparent); box-shadow: var(--shadow); }
     .btn:hover { transform: translateY(-1px); }
 
-    /* Hero */
     .hero { display:grid; grid-template-columns: 1.1fr .9fr; gap:28px; align-items:center; padding: 40px 0 24px; }
     .hero-card { background: var(--card); border: 1px solid color-mix(in oklab, var(--brand) 20%, transparent); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); }
     .title { font-size: clamp(28px, 4vw, 44px); font-weight:800; margin:0 0 12px; }
     .subtitle { color: var(--muted); font-size: clamp(15px, 1.6vw, 18px); line-height:1.6; }
 
-    /* Section */
     .section { padding:30px 0; }
     .sec-title { font-size:22px; font-weight:800; margin-bottom:14px; }
 
@@ -71,77 +68,61 @@
 <body>
 <header class="nav">
   <div class="container nav-inner">
-    <a class="brand" href="../index.html"><span class="dot"></span><span>🍵 Yonom1 · 个人主页</span></a>
+    <a class="brand" href="../index.html"><span class="dot"></span><span>🍵 Yonom1 · Personal Homepage</span></a>
     <nav class="nav-links">
-      <a class="btn" href="../index.html#about">🙋 关于我</a>
-      <a class="btn" href="../index.html#projects">📂 项目</a>
-      <a class="btn" href="../index.html#contact">📧 联系我</a>
-      <a class="btn" href="../introduce.html">📝 博客</a>
-      <a class="btn" href="../links.html">🔗 友情链接</a>
-      <!-- language switch -->
-      <a class="btn" href="../en/project/njuszcs.html" aria-label="English version">EN</a>
+      <a class="btn" href="../index.html#about">🙋 About</a>
+      <a class="btn" href="../index.html#projects">📂 Projects</a>
+      <a class="btn" href="../index.html#contact">📧 Contact</a>
+      <a class="btn" href="../introduce.html">📝 Blog</a>
+      <a class="btn" href="../links.html">🔗 Links</a>
+      <a class="btn" href="../../project/shapez.html" aria-label="Chinese version">ZH</a>
     </nav>
   </div>
 </header>
 
 <main class="container">
-  <!-- Hero -->
   <section class="hero">
     <div class="hero-card">
-      <h1 class="title">🥘 NJUSZ-CS</h1>
-      <p class="subtitle">南京大学智能科学与技术学院《程序设计实训》课程大作业，采用 Qt6 开发的小组合作项目。</p>
+      <h1 class="title">🏭 ShapeZ-like Factory Game</h1>
+      <p class="subtitle">My first substantial solo project, completed independently by self-learning Qt. TA score: <strong>96</strong>.</p>
       <p style="margin-top:18px;">
-        <a href="https://git.nju.edu.cn/SZ-MINT/njusz-cs" target="_blank" rel="noopener" class="btn">🌐 项目仓库（暂未开源）</a>
+        <a href="https://github.com/Yonom1/Shapez" target="_blank" rel="noopener" class="btn">🌐 Project Repository (Not yet open source)</a>
       </p>
     </div>
     <figure>
-      <img src="../img/njusz.png" alt="NJUSZ-CS 游戏截图" class="screenshot">
+      <img src="../../img/shapez.png" alt="ShapeZ-like game screenshot" class="screenshot">
     </figure>
   </section>
 
-  <!-- 简介 -->
   <section class="section">
-    <h2 class="sec-title">📖 项目简介</h2>
+    <h2 class="sec-title">📖 Project Introduction</h2>
     <div class="card">
-      <p>南苏食堂模拟器（NJUSZ-Canteen Simulator, NJUSZ-CS）是一款由南京大学苏州校区学生自主研发的学校食堂模拟器。在游戏中，你将扮演新上任的“食堂经理”，展开自己的经营，避免不同的事件。</p>
-      <p><strong>开发人员分工：</strong></p>
+      <p>The ShapeZ-like Factory Game is a substantial project I completed independently during the summer of my freshman year. Through this project, I learned and practiced Qt technology and became familiar with the GUI program design workflow.</p>
       <ul>
-        <li>策划：刘晓睿</li>
-        <li>美工：彭晋</li>
-        <li>开发：叶晋、陈柏均</li>
+        <li>High project completion; TA score: <strong>96</strong>.</li>
+        <li>Trained my ability to organize large-scale projects.</li>
+        <li>Created a video for the project and uploaded it to Bilibili, receiving positive feedback.</li>
       </ul>
     </div>
   </section>
 
-  <!-- 经验 -->
   <section class="section">
-    <h2 class="sec-title">✨ 项目经验</h2>
+    <h2 class="sec-title">🎬 Video & Reception</h2>
     <div class="grid">
       <div class="card">
-        <ul>
-          <li>小组合作课程项目，承担工作：前期策划、后期剪辑与部分美工。</li>
-          <li>项目完成度高，课程评分 <strong>94.2 分</strong>。</li>
-          <li>通过流行素材剪辑项目介绍视频，在同学中获得较好反响。</li>
-        </ul>
+        <p>Independently edited and produced a project introduction video and published it on Bilibili, reaching a peak of <strong>3200+</strong> views and <strong>57</strong> likes.</p>
+        <p>Video link: <a href="https://www.bilibili.com/video/BV1rL31eSEVM/?spm_id_from=333.1387.homepage.video_card.click" target="_blank" rel="noopener">▶️ What?! College student self-learns Qt and creates a ShapeZ-like factory game</a></p>
       </div>
     </div>
-    <section class="section">
-      <h2 class="sec-title">🎬 项目视频</h2>
-      <div class="grid">
-        <div class="card">
-          <p>视频链接：<a href="https://www.bilibili.com/video/BV1qgCDYnEk2/?spm_id_from=333.1387.homepage.video_card.click&vd_source=6a58ee73a1de5c9a04d4a86e12066228" target="_blank" rel="noopener">▶️ 论如何用猫meme的方式打开程设大作业……</a></p>
-        </div>
-      </div>
-    </section>
   </section>
   <div class="container" style="text-align:center; margin: 10px 0 0;">
-    <a href="../project.html" class="btn">📂 返回项目页</a>
-    <a href="../index.html" class="btn" style="margin-left:8px;">🏠 返回主页</a>
+    <a href="../project.html" class="btn">📂 Back to Projects</a>
+    <a href="../index.html" class="btn" style="margin-left:8px;">🏠 Back to Home</a>
   </div>
 </main>
 
 <footer>
-  <div class="container">🌱 <strong>Keep Learning, Keep Creating.</strong></div>
+  <div class="container">🌱 <strong>Stay hungry, stay foolish.</strong></div>
 </footer>
 </body>
 </html>

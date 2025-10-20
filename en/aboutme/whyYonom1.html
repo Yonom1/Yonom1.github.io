@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>🍵 我为什么叫 Yonom1？</title>
-  <meta name="description" content="Yonom1 名号的由来" />
+  <title>🍵 Why am I called Yonom1?</title>
+  <meta name="description" content="The origin of the name Yonom1" />
   <meta name="color-scheme" content="light dark" />
-  <link rel="icon" href="../logo.png" />
+  <link rel="icon" href="../../logo.png" />
   <style>
     :root {
       --bg: #0b0b0b;
       --card: #121212;
       --text: #f8f8f8;
       --muted: #c9c9c9;
-      --brand: #7BA05B;    /* 主色：绿茶色 */
-      --brand-2: #5C8A47;  /* 次色：深茶绿 */
+      --brand: #7BA05B;
+      --brand-2: #5C8A47;
       --ring: rgba(123, 160, 91, .35);
       --shadow: 0 10px 30px rgba(0,0,0,.35);
       --radius: 16px;
@@ -32,14 +32,13 @@
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
       color: var(--text);
-      background: url('../img/bg.png') center center / cover no-repeat fixed, var(--bg);
+      background: url('../../img/bg.png') center center / cover no-repeat fixed, var(--bg);
     }
     a { color: inherit; text-decoration: none; }
     .container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
 
-    /* 顶部导航（统一） */
     .nav { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(140%) blur(10px); background: color-mix(in oklab, var(--bg) 85%, transparent); border-bottom: 1px solid color-mix(in oklab, var(--brand) 25%, transparent); }
     .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
     .brand { display:flex; align-items:center; gap:12px; font-weight:700; }
@@ -48,7 +47,6 @@
     .btn { display:inline-flex; align-items:center; gap:6px; padding:10px 14px; border-radius:999px; border:1px solid color-mix(in oklab, var(--brand) 45%, transparent); background: color-mix(in oklab, var(--card) 80%, transparent); box-shadow: var(--shadow); }
     .btn:hover { transform: translateY(-1px); }
 
-    /* 页头 */
     .page-head { display:flex; align-items:center; gap:18px; padding: 28px 0 12px; }
     .page-head .logo { width:56px; height:56px; border-radius:14px; overflow:hidden; border: 1px solid color-mix(in oklab, var(--brand) 25%, transparent); box-shadow: var(--shadow); }
     .page-head .logo img { width:100%; height:100%; object-fit: cover; }
@@ -69,53 +67,49 @@
   </style>
 </head>
 <body>
-<!-- 顶部导航（统一） -->
 <header class="nav">
   <div class="container nav-inner">
-    <a class="brand" href="../index.html"><span class="dot"></span><span>🍵 Yonom1 · 个人主页</span></a>
+    <a class="brand" href="../index.html"><span class="dot"></span><span>🍵 Yonom1 · Personal Homepage</span></a>
     <nav class="nav-links">
-      <a class="btn" href="../index.html#about">🙋 关于我</a>
-      <a class="btn" href="../index.html#projects">📂 项目</a>
-      <a class="btn" href="../index.html#contact">📧 联系我</a>
-      <a class="btn" href="../introduce.html">📝 博客</a>
-      <a class="btn" href="../links.html">🔗 友情链接</a>
-      <!-- language switch -->
-      <a class="btn" href="../en/aboutme/whyYonom1.html" aria-label="English version">EN</a>
+      <a class="btn" href="../index.html#about">🙋 About</a>
+      <a class="btn" href="../index.html#projects">📂 Projects</a>
+      <a class="btn" href="../index.html#contact">📧 Contact</a>
+      <a class="btn" href="../introduce.html">📝 Blog</a>
+      <a class="btn" href="../links.html">🔗 Links</a>
+      <a class="btn" href="../../aboutme/whyYonom1.html" aria-label="Chinese version">ZH</a>
     </nav>
   </div>
 </header>
 
 <main class="container" id="top">
-  <!-- 页头 -->
   <section class="page-head" aria-labelledby="title">
-    <div class="logo" aria-hidden="true"><img src="../img/logo.jpg" alt="logo"></div>
+    <div class="logo" aria-hidden="true"><img src="../../img/logo.jpg" alt="logo"></div>
     <div>
-      <h1 id="title" class="page-title">🍵 我为什么叫 Yonom1？</h1>
-      <div class="crumbs">当前位置：<a href="../index.html">主页</a> · <a href="../introduce.html">博客</a> · <a href="../aboutme.html">人物志</a> · <span>whyYonom1</span></div>
+      <h1 id="title" class="page-title">🍵 Why am I called Yonom1?</h1>
+      <div class="crumbs">Current location: <a href="../index.html">Home</a> · <a href="../introduce.html">Blog</a> · <a href="../aboutme.html">About Me</a> · <span>whyYonom1</span></div>
     </div>
   </section>
 
-  <!-- 正文 -->
   <article class="article">
-    <p>我的女朋友送给我的第一个具有纪念意义的礼物，是一个茶杯。它通体黑色，带有细腻的磨砂纹路和温润的木质把手，杯身印着一幅千里江山图，还贴心地配了杯盖和滤斗。</p>
-    <p>从那之后，“茶杯”就成了我的网名。英文当然是 “teacup”，既有意义也贴合心意。</p>
-    <p>不过用着用着，我开始觉得 “teacup” 的发音不太顺口——开头音节太长，结尾又太短，读起来总觉得不够舒服，也有点太普通了。于是我开始琢磨，能不能换一种语言说 “茶杯”？</p>
-    <p>我想到了日语，和中文同源又自带一种韵味。茶杯在日语中写作 “湯飲み”，发音是 <strong>Yonomi</strong>。我喜欢这个发音，又觉得字母有些太 “规矩”，就参考瓦圈的命名传统，把最后的 “i” 换成了 “1”，既有点潮，又多了点个人特色。</p>
-    <p>就这样，<strong>Yonom1</strong> 诞生了。这个名字，既藏着一份回忆，也承载着我的风格和喜好。</p>
+    <p>The first meaningful gift my girlfriend gave me was a teacup. It's entirely black with a delicate matte texture and a warm wooden handle. The body is printed with a "Thousand Miles of Rivers and Mountains" painting, and it thoughtfully came with a lid and a tea strainer.</p>
+    <p>Since then, "teacup" became my online name. In English, of course, it's "teacup" — both meaningful and fitting.</p>
+    <p>However, as I used it, I started to feel that the pronunciation of "teacup" wasn't quite smooth — the first syllable was too long, and the ending too short. Reading it always felt a bit uncomfortable, and it was a bit too ordinary. So I began to wonder, could I say "teacup" in another language?</p>
+    <p>I thought of Japanese, which shares roots with Chinese and carries a certain charm. In Japanese, "teacup" is written as "湯飲み" and pronounced <strong>Yonomi</strong>. I liked the pronunciation, but I felt the letters were a bit too "conventional." So, taking inspiration from the Vtuber naming tradition, I replaced the final "i" with a "1" — adding a bit of style and personal flair.</p>
+    <p>And that's how <strong>Yonom1</strong> was born. This name holds a memory and carries my style and preferences.</p>
 
     <figure class="figure">
-      <img src="../img/yonom1.jpg" alt="相关图片">
+      <img src="../../img/yonom1.jpg" alt="Related image">
     </figure>
 
   </article>
   <div class="container" style="text-align:center; margin: 10px 0 0;">
-    <a href="../aboutme.html" class="btn">⬅️ 返回人物志</a>
-    <a href="../index.html" class="btn" style="margin-left:8px;">🏠 返回主页</a>
+    <a href="../aboutme.html" class="btn">⬅️ Back to About Me</a>
+    <a href="../index.html" class="btn" style="margin-left:8px;">🏠 Back to Home</a>
   </div>
 </main>
 
 <footer>
-  <div class="container">🌱 <strong>保持好奇，笃行致远。</strong></div>
+  <div class="container">🌱 <strong>Stay hungry, stay foolish.</strong></div>
 </footer>
 </body>
 </html>

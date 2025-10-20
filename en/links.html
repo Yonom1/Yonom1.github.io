@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>🔗 友情链接 · Yonom1</title>
-  <meta name="description" content="Yonom1 · 友情链接" />
+  <title>🔗 Links · Yonom1</title>
+  <meta name="description" content="Yonom1 · Friendly links" />
   <meta name="color-scheme" content="light dark" />
-  <link rel="icon" href="logo.png" />
+  <link rel="icon" href="../logo.png" />
   <style>
     :root {
       --bg: #0b0b0b;
       --card: #121212;
       --text: #f8f8f8;
       --muted: #c9c9c9;
-      --brand: #7BA05B;    /* 绿茶主色 */
-      --brand-2: #5C8A47;  /* 深茶绿 */
+      --brand: #7BA05B;
+      --brand-2: #5C8A47;
       --ring: rgba(123,160,91,.35);
       --shadow: 0 10px 30px rgba(0,0,0,.35);
       --radius: 16px;
@@ -23,11 +23,10 @@
     @media (prefers-color-scheme: light) {
       :root { --bg:#f6fff2; --card:#f2faec; --text:#1a1a1a; --muted:#5a5a5a; --shadow:0 10px 30px rgba(0,0,0,.08);} }
     *{box-sizing:border-box}
-    body{ margin:0; font-family: ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; color:var(--text); background: url('img/bg.png') center center / cover no-repeat fixed, var(--bg); }
+    body{ margin:0; font-family: ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif; color:var(--text); background: url('../img/bg.png') center center / cover no-repeat fixed, var(--bg); }
     a{ color:inherit; text-decoration:none }
     .container{ max-width:var(--maxw); margin:0 auto; padding:24px }
 
-    /* 顶部导航（统一） */
     .nav{ position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(10px); background:color-mix(in oklab, var(--bg) 85%, transparent); border-bottom:1px solid color-mix(in oklab, var(--brand) 25%, transparent) }
     .nav-inner{ display:flex; align-items:center; justify-content:space-between; gap:16px }
     .brand{ display:flex; align-items:center; gap:12px; font-weight:700 }
@@ -36,14 +35,12 @@
     .btn{ display:inline-flex; align-items:center; gap:6px; padding:10px 14px; border-radius:999px; border:1px solid color-mix(in oklab, var(--brand) 45%, transparent); background:color-mix(in oklab, var(--card) 80%, transparent); box-shadow:var(--shadow) }
     .btn:hover{ transform:translateY(-1px) }
 
-    /* 页头 */
     .page-head{ display:flex; align-items:center; gap:18px; padding:28px 0 12px }
     .page-head .logo{ width:56px; height:56px; border-radius:14px; overflow:hidden; border:1px solid color-mix(in oklab, var(--brand) 25%, transparent); box-shadow:var(--shadow) }
     .page-head .logo img{ width:100%; height:100%; object-fit:cover }
     .page-title{ font-size:clamp(26px,3.2vw,36px); font-weight:800; margin:0 }
     .page-sub{ color:var(--muted); margin:4px 0 0 }
 
-    /* 友链列表 */
     .section{ padding:6px 0 28px }
     .sec-title{ font-size:20px; font-weight:800; margin:0 0 14px }
     .grid{ display:grid; grid-template-columns: repeat(12,1fr); gap:18px }
@@ -64,94 +61,83 @@
   </style>
 </head>
 <body>
-<!-- 顶部导航（统一） -->
 <header class="nav">
   <div class="container nav-inner">
-    <a class="brand" href="index.html"><span class="dot"></span><span>🍵 Yonom1 · 个人主页</span></a>
+    <a class="brand" href="index.html"><span class="dot"></span><span>🍵 Yonom1 · Personal Homepage</span></a>
     <nav class="nav-links">
-      <a class="btn" href="index.html#about">🙋 关于我</a>
-      <a class="btn" href="index.html#projects">📂 项目</a>
-      <a class="btn" href="index.html#contact">📧 联系我</a>
-      <a class="btn" href="introduce.html">📝 博客</a>
-      <a class="btn" href="#top">🔗 友情链接</a>
-
-      <!-- language switch -->
-      <a class="btn" href="en/links.html" aria-label="English version">EN</a>
-
+      <a class="btn" href="index.html#about">🙋 About</a>
+      <a class="btn" href="index.html#projects">📂 Projects</a>
+      <a class="btn" href="index.html#contact">📧 Contact</a>
+      <a class="btn" href="introduce.html">📝 Blog</a>
+      <a class="btn" href="#top">🔗 Links</a>
+      <a class="btn" href="../links.html" aria-label="Chinese version">ZH</a>
     </nav>
   </div>
 </header>
 
 <main class="container" id="top">
-  <!-- 页头 -->
   <section class="page-head" aria-labelledby="title">
-    <div class="logo" aria-hidden="true"><img src="img/logo.jpg" alt="logo"></div>
+    <div class="logo" aria-hidden="true"><img src="../img/logo.jpg" alt="logo"></div>
     <div>
-      <h1 id="title" class="page-title">🔗 友情链接</h1>
-      <p class="page-sub">互相链接，互相鼓励。下面是我常看的朋友与站点。</p>
+      <h1 id="title" class="page-title">🔗 Friendly Links</h1>
+      <p class="page-sub">Link each other, encourage each other. Below are my friends and sites I frequently visit.</p>
     </div>
   </section>
 
-  <!-- 友链列表 -->
   <section class="section" aria-labelledby="sec-friends">
-    <h2 class="sec-title" id="sec-friends">👥 好友</h2>
+    <h2 class="sec-title" id="sec-friends">👥 Friends</h2>
     <div class="grid">
       <div class="card" style="grid-column: span 12; display:grid; gap:12px;">
-        <!-- byml -->
         <div class="friend">
-          <div class="avatar"><img src="img/links/byml.png" alt="byml 头像"></div>
+          <div class="avatar"><img src="../img/links/byml.png" alt="byml avatar"></div>
           <div>
             <div class="f-title">byml</div>
-            <div class="f-desc">OI 大佬，具身智能大佬，身边的百科全书</div>
+            <div class="f-desc">OI expert, embodied intelligence expert, encyclopedia around me</div>
           </div>
-          <div class="f-actions"><a class="btn" href="https://byml-c.github.io/" target="_blank" rel="noopener">访问主页 ↗</a></div>
+          <div class="f-actions"><a class="btn" href="https://byml-c.github.io/" target="_blank" rel="noopener">Visit ↗</a></div>
         </div>
 
-        <!-- Pengjin2005 -->
         <div class="friend">
-          <div class="avatar"><img src="img/links/pengjin2005.png" alt="Pengjin2005 头像"></div>
+          <div class="avatar"><img src="../img/links/pengjin2005.png" alt="Pengjin2005 avatar"></div>
           <div>
             <div class="f-title">Pengjin2005</div>
-            <div class="f-desc">有天赋且勤奋，爱喝爱玩有生活气（他的网站最近似乎在维护）</div>
+            <div class="f-desc">Talented and diligent, loves tea and enjoys life (his site seems to be under maintenance)</div>
           </div>
-          <div class="f-actions"><a class="btn" href="https://Pengjin2005.github.io/" target="_blank" rel="noopener">访问主页 ↗</a></div>
+          <div class="f-actions"><a class="btn" href="https://Pengjin2005.github.io/" target="_blank" rel="noopener">Visit ↗</a></div>
         </div>
 
-        <!-- TenofHearts -->
         <div class="friend">
-          <div class="avatar"><img src="img/links/tenofhearts.png" alt="TenofHearts 头像"></div>
+          <div class="avatar"><img src="../img/links/tenofhearts.png" alt="TenofHearts avatar"></div>
           <div>
             <div class="f-title">TenofHearts</div>
-            <div class="f-desc">叶神</div>
+            <div class="f-desc">Ye Shen</div>
           </div>
-          <div class="f-actions"><a class="btn" href="https://TenofHearts.github.io/" target="_blank" rel="noopener">访问主页 ↗</a></div>
+          <div class="f-actions"><a class="btn" href="https://TenofHearts.github.io/" target="_blank" rel="noopener">Visit ↗</a></div>
         </div>
 
-        <!-- 占位示例 2 -->
         <div class="friend">
-          <div class="avatar"><img src="img/links/wyaaaattwho.jpg" alt="wyaaaattwho 头像"></div>
+          <div class="avatar"><img src="../img/links/wyaaaattwho.jpg" alt="wyaaaattwho avatar"></div>
           <div>
             <div class="f-title">wyaaaattwho</div>
-            <div class="f-desc">重庆 RL 第一人</div>
+            <div class="f-desc">Chongqing RL No.1</div>
           </div>
-          <div class="f-actions"><a class="btn" href="https://blog.wyaaaattwho.xyz/" target="_blank" rel="noopener">访问主页 ↗</a></div>
+          <div class="f-actions"><a class="btn" href="https://blog.wyaaaattwho.xyz/" target="_blank" rel="noopener">Visit ↗</a></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 互链须知（占位，可删除） -->
   <section class="section" aria-labelledby="sec-notes">
-    <h2 class="sec-title" id="sec-notes">📌 申请互链</h2>
+    <h2 class="sec-title" id="sec-notes">📌 Apply for Link Exchange</h2>
     <div class="card">
-      <p class="f-desc">欢迎互链！邮件 <a href="mailto:lxr209042@126.com">lxr209042@126.com</a> 或在 GitHub 留言。建议提供：站点名、描述、链接、头像 80×80。</p>
-      <div style="margin-top:8px" class="tag">我的站点信息：Yonom1 · https://yonom1.github.io</div>
+      <p class="f-desc">Welcome to exchange links! Email <a href="mailto:lxr209042@126.com">lxr209042@126.com</a> or leave a message on GitHub. Please provide: site name, description, link, avatar 80×80.</p>
+      <div style="margin-top:8px" class="tag">My site info: Yonom1 · https://yonom1.github.io</div>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="container">🌱 <strong>保持好奇，笃行致远。</strong> · <a href="index.html">返回主页</a></div>
+  <div class="container">🌱 <strong>Stay hungry, stay foolish.</strong> · <a href="index.html">Back to Home</a></div>
 </footer>
 </body>
 </html>
