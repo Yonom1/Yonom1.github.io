@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🍵 当我用“biang”字向AI自证为人</title>
+  <meta name="description" content="当我用“biang”字向AI自证为人" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="../logo.png" />
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --card: #121212;
+      --text: #f8f8f8;
+      --muted: #c9c9c9;
+      --brand: #7BA05B;    /* 主色：绿茶色 */
+      --brand-2: #5C8A47;  /* 次色：深茶绿 */
+      --ring: rgba(123, 160, 91, .35);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --maxw: 900px;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f6fff2;
+        --card: #f2faec;
+        --text: #1a1a1a;
+        --muted: #5a5a5a;
+        --shadow: 0 10px 30px rgba(0,0,0,.08);
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color: var(--text);
+      background: url('../img/bg.png') center center / cover no-repeat fixed, var(--bg);
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+
+    /* 顶部导航（统一） */
+    .nav { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(140%) blur(10px); background: color-mix(in oklab, var(--bg) 85%, transparent); border-bottom: 1px solid color-mix(in oklab, var(--brand) 25%, transparent); }
+    .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:700; }
+    .brand .dot { width:10px; height:10px; border-radius:50%; background: linear-gradient(90deg, var(--brand), var(--brand-2)); box-shadow: 0 0 0 4px var(--ring); }
+    .nav-links { display:flex; gap:18px; }
+    .btn { display:inline-flex; align-items:center; gap:6px; padding:10px 14px; border-radius:999px; border:1px solid color-mix(in oklab, var(--brand) 45%, transparent); background: color-mix(in oklab, var(--card) 80%, transparent); box-shadow: var(--shadow); }
+    .btn:hover { transform: translateY(-1px); }
+
+    /* 页头 */
+    .page-head { display:flex; align-items:center; gap:18px; padding: 28px 0 12px; }
+    .page-head .logo { width:56px; height:56px; border-radius:14px; overflow:hidden; border: 1px solid color-mix(in oklab, var(--brand) 25%, transparent); box-shadow: var(--shadow); }
+    .page-head .logo img { width:100%; height:100%; object-fit: cover; }
+    .page-title { font-size: clamp(26px, 3.2vw, 36px); font-weight: 800; margin: 0; }
+    .crumbs { display:flex; gap:8px; align-items:center; color: var(--muted); font-size: 14px; margin: 6px 0 0; }
+
+    .article { background: var(--card); border:1px solid color-mix(in oklab, var(--brand) 18%, transparent); box-shadow: var(--shadow); border-radius: var(--radius); padding: 22px; line-height: 1.85; }
+    .article p { color: var(--text); margin: 0 0 1em; }
+    .article strong { color: color-mix(in oklab, var(--text) 92%, var(--brand) 8%); }
+    .lead { color: var(--muted); margin: 6px 0 16px; }
+
+    .figure { margin-top: 18px; border-radius: 14px; overflow: hidden; border:1px solid color-mix(in oklab, var(--brand) 22%, transparent); box-shadow: var(--shadow); }
+    .figure img { width:100%; height:auto; display:block; }
+
+    .linkcard { display:flex; align-items:center; gap:12px; padding: 14px; border-radius: 14px; border:1px solid color-mix(in oklab, var(--brand) 22%, transparent); background: color-mix(in oklab, var(--card) 96%, transparent); transition: transform .2s ease; margin-bottom: 24px; text-decoration: none; color: inherit; }
+    .linkcard:hover { transform: translateY(-1px); background: color-mix(in oklab, var(--card) 100%, transparent); }
+    .linkcard .dot { width:10px; height:10px; border-radius:50%; background: linear-gradient(90deg, var(--brand), var(--brand-2)); box-shadow: 0 0 0 6px var(--ring); flex: 0 0 auto; }
+    .linkcard .title { font-weight:700; }
+    .linkcard .meta { color: var(--muted); font-size: 13px; }
+
+    .actions { display:flex; gap:10px; margin-top: 18px; }
+
+    footer { margin:40px 0 10px; color:var(--muted); font-size:14px; display:flex; justify-content:center; }
+  </style>
+</head>
+<body>
+<!-- 顶部导航（统一） -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html"><span class="dot"></span><span>🍵 Yonom1 · 个人主页</span></a>
+    <nav class="nav-links">
+      <a class="btn" href="../index.html#about">🙋 关于我</a>
+      <a class="btn" href="../index.html#projects">📂 项目</a>
+      <a class="btn" href="../index.html#contact">📧 联系我</a>
+      <a class="btn" href="../introduce.html">📝 博客</a>
+      <a class="btn" href="../links.html">🔗 友情链接</a>
+      <!-- language switch -->
+      <a class="btn" href="../en/aboutme/biang.html" aria-label="English version">EN</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container" id="top">
+  <!-- 页头 -->
+  <section class="page-head" aria-labelledby="title">
+    <div class="logo" aria-hidden="true"><img src="../img/logo.jpg" alt="logo"></div>
+    <div>
+      <h1 id="title" class="page-title">🍜 当我用“biang”字向AI自证为人</h1>
+      <div class="crumbs">当前位置：<a href="../index.html">主页</a> · <a href="../introduce.html">博客</a> · <a href="../aboutme.html">人物志</a> · <span>biang</span></div>
+    </div>
+  </section>
+
+  <!-- 正文 -->
+  <article class="article">
+    <a class="linkcard" href="https://www.bilibili.com/video/BV1qsBiBxE2Y" target="_blank" rel="noopener">
+      <span class="dot" style="background: #fb7299; box-shadow: 0 0 0 4px rgba(251, 114, 153, 0.25);"></span>
+      <div>
+        <div class="title">📺 灵感来源：用一个字证明你不是机器人</div>
+        <div class="meta">Bilibili · 视频素材</div>
+      </div>
+    </a>
+
+    <p>在视频里的高中作文课上，老师抛出一个问题：“用一个字证明你不是机器人，你会选什么？”学生们写下“爱”“恨”“钝”“慢”——这些带着体温与缺憾的回答，像从年轻心脏直接摘下的切片。三年后，当已是智能科学专业学生的我，在代码与算法的间隙里重新面对这个问题时，第一反应却是biangbiang面的“biang”：一个复杂到输入法难以打出、笔画如迷宫般的字。</p>
+    <p>不是因为它的文化隐喻，不是因为它象征未被数字化的传统，仅仅因为——它是汉字中笔画最多的字之一。选择它，更像是一次被训练好的条件反射：在最需要证明人性的瞬间，我下意识调取的竟是复杂度——这个冰冷的可计算属性。</p>
+    <p>那一刻的清醒让我悚然。仿佛透过三年的技术训练，我看见自己的认知如何被悄然重构：当学弟学妹们还在用情感、用困惑、用存在的不完美来定义人之为人的时候，我已经在用“信息量”和“处理难度”来回应同一道题。从“钝”到“biang”，不是成长，而是一场无意识的技术化迁徙。</p>
+    <p>我们都是造雨的人，却最先被雨淋湿。作为AI领域的学习者，我们处于这场变革的风暴中心：用AI激发科研灵感，用Copilot生成代码框架，甚至将通识课作业——那些本应成为技术之外呼吸空间的人文思考——也委托给语言模型润色。效率的齿轮高速运转，吞噬的不仅是时间，更是那种低效的、沉思的、允许无目的漫游的心智状态。工具反过来塑造了使用者：当一切皆可优化，那些不可优化之物便显得格格不入——无论是一次只为看风景的散步，还是一首读了三遍才懂半句的诗。</p>
+    <p>直到我看见一位同学，保持着每周读完一本书的节奏，在2025年已读完七十余本；某个清晨他骑车从太湖边的南苏出发，去无锡吃一顿早饭，然后返回。这种低效率的丰富性让我意识到：在技术追求可微渲染般无限逼近真实的世界时，那些无法被微分的部分——骑行时皮肤感受的风压变化，面条热气模糊眼镜瞬间的朦胧，完成一件无功利之事后细微的成就感——才是人性最后的根据地。</p>
+    <p>是的，我与AI的关系，恰如基于可微渲染的三维重建：多次的反传和优化，能让场景更加逼近真实世界；通过多次迭代反馈，AI可以无限逼近我的意图，但永远无法成为那个包含了全部身体记忆、情绪波动与潜意识冲动的我本人。它能快速生成这篇文章的草稿，但无法复现我写下这些文字时，苏州初冬的冷风正敲打着自习室的窗；它无法模拟我敲击键盘时，指尖残留的昨晚期末复习带来的焦虑；更无法重现那个选择“biang”字的瞬间，内心升起的、对“自己正在失去感受力”的清醒悲哀。</p>
+    <p>看着那位同学在无锡的晨风里吃面，我感受到的甚至不是向往，而是一种属于渐冻人对正常肢体的遥远羡慕——我理解那种鲜活的美好，但我似乎已经失去了触碰它的器官。</p>
+    <p>我依然在这场风暴的中心，依然在用AI激发思路，用Copilot填充代码，甚至依然在把通识课的作业交给大模型去“水”出一篇像模像样的文章。我知道这是一种对灵魂的让渡，但在效率的鞭策和生活的重压下，我停不下来。我就像一个明明看见前方是悬崖，却因为惯性太大而无法刹车的驾驶员，只能眼睁睁看着自己随着整个技术时代的洪流一同坠落。</p>
+    <p>可微渲染追求的是参数的无限优化，以求逼近真实。而我感到恐惧的是，我们这代人似乎正在进行一种反向的优化：为了适应这个由我们亲手搭建的AI世界，我们正在主动修剪掉那些不可导、不平滑、低效率的人性的噪点。</p>
+    <p>或许，那个关于“证明自己不是机器人”的答案，最终不是某个字，而是此刻这份无法被算法消除的、清醒而绵长的痛楚。</p>
+    <p class="meta" style="margin-top: 2em; font-style: italic; font-size: 0.9em; color: var(--muted);">*本文由deepseek辅助撰写</p>
+  </article>
+
+  <div class="actions" style="justify-content:center; margin: 30px 0;">
+    <a href="../introduce.html" class="btn">⬅️ 返回博客</a>
+    <a href="../aboutme.html" class="btn">👤 返回人物志</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Yonom1. All rights reserved.
+  </footer>
+</main>
+</body>
+</html>
