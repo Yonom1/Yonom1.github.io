@@ -49,10 +49,13 @@
     .btn:hover { transform: translateY(-1px); }
 
     /* Hero */
-    .hero { padding: 40px 0 24px; }
+    .hero { display:grid; grid-template-columns: 1.1fr .9fr; gap:28px; align-items:center; padding: 40px 0 24px; }
     .hero-card { background: var(--card); border: 1px solid color-mix(in oklab, var(--brand) 20%, transparent); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); }
     .title { font-size: clamp(28px, 4vw, 44px); font-weight:800; margin:0 0 12px; }
     .subtitle { color: var(--muted); font-size: clamp(15px, 1.6vw, 18px); line-height:1.6; }
+
+    /* Screenshot */
+    .screenshot { width:100%; border-radius:12px; box-shadow: var(--shadow); }
 
     /* Section */
     .section { padding:30px 0; }
@@ -62,6 +65,17 @@
     .card { background: var(--card); border: 1px solid color-mix(in oklab, var(--brand) 18%, transparent); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); margin-bottom: 20px; }
     .card p { color: var(--muted); line-height:1.8; margin: 12px 0; }
     .card ul { color: var(--muted); line-height:1.8; }
+
+    /* Inline Code Style */
+    code {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.85em;
+      padding: 0.2em 0.4em;
+      border-radius: 6px;
+      background-color: color-mix(in oklab, var(--text) 8%, transparent);
+      color: var(--brand);
+      border: 1px solid color-mix(in oklab, var(--text) 10%, transparent);
+    }
     
     /* 占位提示 */
     .placeholder { background: color-mix(in oklab, var(--brand) 10%, transparent); border: 2px dashed color-mix(in oklab, var(--brand) 30%, transparent); border-radius: var(--radius); padding: 40px; text-align: center; color: var(--muted); margin: 20px 0; }
@@ -90,58 +104,75 @@
     <div class="hero-card">
       <h1 class="title">🔬 几何监督的 3D Gaussian Splatting 渲染</h1>
       <p class="subtitle">
-        基于 3D Gaussian Splatting 技术的高质量 3D 场景重建与渲染项目，结合几何监督方法提升重建质量与视觉效果。
+        NJU-3DV 课题组（姚遥教授）入组项目。通过本项目熟悉 3DGS 算法流程，掌握 3D Vision 领域基本研究方法与工程实践。
       </p>
       <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
-        <span class="btn" style="opacity:0.6;">🔗 GitHub (待发布)</span>
-        <span class="btn" style="opacity:0.6;">📄 论文/报告 (撰写中)</span>
+        <a href="https://github.com/Yonom1/pointrix_3dv_enrolment/tree/my-change-branch" target="_blank" rel="noopener" class="btn">🐙 GitHub 仓库</a>
+      </div>
+    </div>
+    <figure>
+      <img src="../img/3dgs.png" alt="3DGS项目截图" class="screenshot">
+    </figure>
+  </section>
+
+  <section class="section">
+    <h2 class="sec-title">📅 项目汇报与记录</h2>
+    <div class="grid">
+      <div class="card" style="grid-column: span 12;">
+        <h3>📑 阶段性报告 (Notion)</h3>
+        <p>本项目实施过程中的学习记录与进展汇报：</p>
+        <ul>
+          <li><strong>3.0 题目公布 &amp; 任务说明</strong><br>
+            <a href="https://closed-brazil-c5e.notion.site/NJU-3DV-1-25679cb32bfa8040a3d2dfafb1820a58?source=copy_link" target="_blank" rel="noopener" style="text-decoration: underline;">👉 查看任务书</a>
+          </li>
+          <li style="margin-top:8px;"><strong>3.1 进度汇报 1.0 (2025.9.17)</strong><br>
+            <a href="https://closed-brazil-c5e.notion.site/NJU-3DV-25779cb32bfa80578aaee968fda3f42e?source=copy_link" target="_blank" rel="noopener" style="text-decoration: underline;">👉 查看汇报文档</a>
+          </li>
+          <li style="margin-top:8px;"><strong>3.2 进度汇报 2.0 (2025.10.21)</strong><br>
+            <a href="https://closed-brazil-c5e.notion.site/NJU-3DV-2-0-29079cb32bfa800dab84f39f6f5f44f8?source=copy_link" target="_blank" rel="noopener" style="text-decoration: underline;">👉 查看汇报文档</a>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="placeholder">
-      <div class="icon">📝</div>
-      <h3>项目详情整理中...</h3>
-      <p>此项目的详细介绍、技术细节、实验结果等内容正在撰写中。</p>
-      <p>敬请期待！</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2 class="sec-title">🎯 项目概述</h2>
+    <h2 class="sec-title">📝 项目总结</h2>
     <div class="card">
-      <h3>技术方向</h3>
-      <p>3D Gaussian Splatting · 几何监督 · 神经渲染 · 3D 重建</p>
-      
-      <h3 style="margin-top:24px;">研究背景</h3>
-      <p>待补充...</p>
-      
-      <h3 style="margin-top:24px;">主要创新点</h3>
-      <p>待补充...</p>
-    </div>
-  </section>
+      <h3 style="margin-bottom: 20px;">💡 代码思路与架构演进</h3>
+      <p>
+        本项目在 <a href="https://github.com/open-renderer/pointrix" target="_blank" rel="noopener" style="text-decoration: underline;">Pointrix</a> 框架基础上进行了深度定制，核心目标是引入<strong>几何监督（Geometry Supervision）</strong>与<strong>时序一致性（Optical Flow）</strong>约束，以提升稀疏视角下的重建质量。
+      </p>
 
-  <section class="section">
-    <h2 class="sec-title">🛠️ 技术栈</h2>
-    <div class="card">
+      <h4 style="margin-top: 24px; color: var(--text);">1. 渲染器改造 (Renderer)</h4>
+      <p>
+        在 <code>MsplatNormalRender</code> 中扩展了传统的泼溅（Splatting）光栅化流程。除了 RGB 颜色外，新增了<strong>光流（Optical Flow）</strong>的实时渲染能力：
+      </p>
       <ul>
-        <li>待补充...</li>
+        <li><strong>双目投影机制：</strong> 在渲染当前帧 <i>t</i> 时，同时将 3D 高斯投影到下一帧 <i>t</i>+1 的相机视角下。</li>
+        <li><strong>光流计算：</strong> 通过计算两个投影坐标的差值 &Delta;<i>uv</i> = <i>uv</i><sub><i>t</i>+1</sub> - <i>uv</i><sub><i>t</i></sub>，得到每个高斯球的瞬时运动场。</li>
+        <li><strong>光栅化：</strong> 将这个运动场作为属性进行 Alpha Blending，从而得到可微分的渲染光流图，用于后续的监督。</li>
       </ul>
-    </div>
-  </section>
 
-  <section class="section">
-    <h2 class="sec-title">📊 实验结果</h2>
-    <div class="card">
-      <p>实验数据与可视化结果整理中...</p>
-    </div>
-  </section>
+      <h4 style="margin-top: 24px; color: var(--text);">2. 损失函数设计 (Loss Design)</h4>
+      <p>
+        为了利用几何先验，在 <code>NormalModel</code> 中构建了多项新的损失函数：
+      </p>
+      <ul>
+        <li><strong>深度监督 (Depth Loss)：</strong> 引入了 Scale-Shift Invariant（尺度平移不变）的对齐策略。由于单目深度估计（如 MoGe）存在尺度不确定性，代码中通过最小二乘法将渲染深度与先验深度对齐，并引入<strong>边缘感知权重 (Edge-aware Weighting)</strong>，降低物体边缘处的对齐误差影响。</li>
+        <li><strong>光流监督 (Flow Loss)：</strong> 使用 Charbonnier Loss 对渲染光流与 GT 光流进行约束。特别加入了稳健性处理（Robustness），过滤掉微小运动噪声，并根据 RGB 图像梯度动态调整权重，保护纹理边缘。</li>
+      </ul>
 
-  <section class="section">
-    <h2 class="sec-title">💡 心得体会</h2>
-    <div class="card">
-      <p>项目总结撰写中...</p>
+      <h4 style="margin-top: 24px; color: var(--text);">3. 数据流与验证 (Pipeline & Validation)</h4>
+      <p>
+        解决了训练与验证集划分导致的时序断裂问题。在 <code>examples/supervise/model.py</code> 中重构了相机管理逻辑，引入 <code>all_camera_model</code> 维护全局物理帧索引（Original Frame ID）。确保即使在随机采样的验证集中，依然能正确索引到物理上的“下一帧”进行光流验证。
+      </p>
+
+      <div style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed color-mix(in oklab, var(--brand) 30%, transparent);">
+        <p style="font-size: 14px; color: var(--muted);">
+          👀 <strong>详细实现：</strong> 欢迎查阅 GitHub 仓库中的 <a href="https://github.com/Yonom1/pointrix_3dv_enrolment/blob/my-change-branch/examples/supervise/model.py" target="_blank" rel="noopener" style="text-decoration: underline;">examples/supervise/model.py</a> 与 <a href="https://github.com/Yonom1/pointrix_3dv_enrolment/blob/my-change-branch/examples/supervise/renderer.py" target="_blank" rel="noopener" style="text-decoration: underline;">renderer.py</a>。
+        </p>
+      </div>
     </div>
   </section>
 </main>

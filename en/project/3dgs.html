@@ -49,10 +49,13 @@
     .btn:hover { transform: translateY(-1px); }
 
     /* Hero */
-    .hero { padding: 40px 0 24px; }
+    .hero { display:grid; grid-template-columns: 1.1fr .9fr; gap:28px; align-items:center; padding: 40px 0 24px; }
     .hero-card { background: var(--card); border: 1px solid color-mix(in oklab, var(--brand) 20%, transparent); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); }
     .title { font-size: clamp(28px, 4vw, 44px); font-weight:800; margin:0 0 12px; }
     .subtitle { color: var(--muted); font-size: clamp(15px, 1.6vw, 18px); line-height:1.6; }
+
+    /* Screenshot */
+    .screenshot { width:100%; border-radius:12px; box-shadow: var(--shadow); }
 
     /* Section */
     .section { padding:30px 0; }
@@ -62,6 +65,17 @@
     .card { background: var(--card); border: 1px solid color-mix(in oklab, var(--brand) 18%, transparent); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); margin-bottom: 20px; }
     .card p { color: var(--muted); line-height:1.8; margin: 12px 0; }
     .card ul { color: var(--muted); line-height:1.8; }
+
+    /* Inline Code Style */
+    code {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.85em;
+      padding: 0.2em 0.4em;
+      border-radius: 6px;
+      background-color: color-mix(in oklab, var(--text) 8%, transparent);
+      color: var(--brand);
+      border: 1px solid color-mix(in oklab, var(--text) 10%, transparent);
+    }
     
     /* Placeholder */
     .placeholder { background: color-mix(in oklab, var(--brand) 10%, transparent); border: 2px dashed color-mix(in oklab, var(--brand) 30%, transparent); border-radius: var(--radius); padding: 40px; text-align: center; color: var(--muted); margin: 20px 0; }
@@ -90,61 +104,77 @@
     <div class="hero-card">
       <h1 class="title">🔬 Geometry-Supervised 3D Gaussian Splatting Rendering</h1>
       <p class="subtitle">
-        High-quality 3D scene reconstruction and rendering project based on 3D Gaussian Splatting technology, enhanced with geometry supervision methods.
+        NJU-3DV Lab (Prof. Yao Yao) enrollment project. This project aims to familiarize with the 3DGS pipeline and master basic research methods and engineering practices in 3D Vision.
       </p>
       <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
-        <span class="btn" style="opacity:0.6;">🔗 GitHub (Coming Soon)</span>
-        <span class="btn" style="opacity:0.6;">📄 Paper/Report (In Progress)</span>
+        <a href="https://github.com/Yonom1/pointrix_3dv_enrolment/tree/my-change-branch" target="_blank" rel="noopener" class="btn">🐙 GitHub Repository</a>
+      </div>
+    </div>
+    <figure>
+      <img src="../../img/3dgs.png" alt="3DGS Project Screenshot" class="screenshot">
+    </figure>
+  </section>
+
+  <section class="section">
+    <h2 class="sec-title">📅 Reports & Records</h2>
+    <div class="grid">
+      <div class="card" style="grid-column: span 12;">
+        <h3>📑 Progress Reports (Notion)</h3>
+        <p>Learning records and progress reports during the project implementation:</p>
+        <ul>
+          <li><strong>3.0 Assignment Announcement & Task Description</strong><br>
+            <a href="https://closed-brazil-c5e.notion.site/NJU-3DV-1-25679cb32bfa8040a3d2dfafb1820a58?source=copy_link" target="_blank" rel="noopener" style="text-decoration: underline;">👉 View Task</a>
+          </li>
+          <li style="margin-top:8px;"><strong>3.1 Progress Report 1.0 (2025.10.17)</strong><br>
+            <a href="https://closed-brazil-c5e.notion.site/NJU-3DV-25779cb32bfa80578aaee968fda3f42e?source=copy_link" target="_blank" rel="noopener" style="text-decoration: underline;">👉 View Report</a>
+          </li>
+          <li style="margin-top:8px;"><strong>3.2 Progress Report 2.0 (2025.10.21)</strong><br>
+            <a href="https://closed-brazil-c5e.notion.site/NJU-3DV-2-0-29079cb32bfa800dab84f39f6f5f44f8?source=copy_link" target="_blank" rel="noopener" style="text-decoration: underline;">👉 View Report</a>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="placeholder">
-      <div class="icon">📝</div>
-      <h3>Project Details Under Construction...</h3>
-      <p>Detailed introduction, technical details, experimental results, etc. are being prepared.</p>
-      <p>Stay tuned!</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2 class="sec-title">🎯 Project Overview</h2>
+    <h2 class="sec-title">📝 Project Summary</h2>
     <div class="card">
-      <h3>Technical Focus</h3>
-      <p>3D Gaussian Splatting · Geometry Supervision · Neural Rendering · 3D Reconstruction</p>
-      
-      <h3 style="margin-top:24px;">Research Background</h3>
-      <p>To be added...</p>
-      
-      <h3 style="margin-top:24px;">Key Innovations</h3>
-      <p>To be added...</p>
-    </div>
-  </section>
+      <h3 style="margin-bottom: 20px;">💡 Code Implementation & Architecture Evolution</h3>
+      <p>
+        This project is deeply customized based on the <a href="https://github.com/open-renderer/pointrix" target="_blank" rel="noopener" style="text-decoration: underline;">Pointrix</a> framework. The core objective is to introduce <strong>Geometry Supervision</strong> and <strong>Temporal Consistency (Optical Flow)</strong> constraints to improve reconstruction quality under sparse views.
+      </p>
 
-  <section class="section">
-    <h2 class="sec-title">🛠️ Tech Stack</h2>
-    <div class="card">
+      <h4 style="margin-top: 24px; color: var(--text);">1. Renderer Modifications</h4>
+      <p>
+        Extended the traditional Splatting rasterization pipeline in <code>MsplatNormalRender</code>. In addition to RGB color, real-time rendering capability for <strong>Optical Flow</strong> has been added:
+      </p>
       <ul>
-        <li>To be added...</li>
+        <li><strong>Dual-Projection Mechanism:</strong> When rendering the current frame <i>t</i>, 3D Gaussians are simultaneously projected to the camera view of the next frame <i>t</i>+1.</li>
+        <li><strong>Flow Calculation:</strong> The instantaneous motion field of each Gaussian sphere is obtained by calculating the difference between the two projection coordinates &Delta;<i>uv</i> = <i>uv</i><sub><i>t</i>+1</sub> - <i>uv</i><sub><i>t</i></sub>.</li>
+        <li><strong>Rasterization:</strong> This motion field is Alpha Blended as an attribute to obtain a differentiable rendered optical flow map for subsequent supervision.</li>
       </ul>
-    </div>
-  </section>
 
-  <section class="section">
-    <h2 class="sec-title">📊 Experimental Results</h2>
-    <div class="card">
-      <p>Experimental data and visualization results under preparation...</p>
-    </div>
-  </section>
+      <h4 style="margin-top: 24px; color: var(--text);">2. Loss Function Design</h4>
+      <p>
+        To leverage geometric priors, multiple new loss functions were constructed in <code>NormalModel</code>:
+      </p>
+      <ul>
+        <li><strong>Depth Loss:</strong> Introduced a Scale-Shift Invariant alignment strategy. Since monocular depth estimation (e.g., MoGe) has scale uncertainty, the code aligns rendered depth with prior depth via least squares and introduces <strong>Edge-aware Weighting</strong> to reduce the impact of alignment errors at object boundaries.</li>
+        <li><strong>Flow Loss:</strong> Constrains rendered optical flow against GT optical flow using Charbonnier Loss. Robustness handling is specifically added to filter out minute motion noise, and weights are dynamically adjusted based on RGB image gradients to preserve texture edges.</li>
+      </ul>
 
-  <section class="section">
-    <h2 class="sec-title">💡 Reflections</h2>
-    <div class="card">
-      <p>Project summary in progress...</p>
+      <h4 style="margin-top: 24px; color: var(--text);">3. Pipeline & Validation</h4>
+      <p>
+        Resolved the temporal discontinuity issue caused by training/validation split. Refactored camera management logic in <code>examples/supervise/model.py</code>, introducing <code>all_camera_model</code> to maintain global Original Frame IDs. This ensures that even in a randomly sampled validation set, the physical "next frame" can still be correctly indexed for optical flow validation.
+      </p>
+
+      <div style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed color-mix(in oklab, var(--brand) 30%, transparent);">
+        <p style="font-size: 14px; color: var(--muted);">
+          👀 <strong>Detailed Implementation:</strong> Check out <a href="https://github.com/Yonom1/pointrix_3dv_enrolment/blob/my-change-branch/examples/supervise/model.py" target="_blank" rel="noopener" style="text-decoration: underline;">examples/supervise/model.py</a> and <a href="https://github.com/Yonom1/pointrix_3dv_enrolment/blob/my-change-branch/examples/supervise/renderer.py" target="_blank" rel="noopener" style="text-decoration: underline;">renderer.py</a> in the GitHub repository.
+        </p>
+      </div>
     </div>
   </section>
-</main>
 
 <footer>
   <div class="container"><strong>Stay hungry, stay foolish.</strong></div>
