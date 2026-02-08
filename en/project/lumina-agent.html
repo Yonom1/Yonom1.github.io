@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>💡 Lumina-Agent — Huawei Cloud HarmonyOS Agent Competition Champion Solution</title>
+  <meta name="description" content="Lumina-Agent — Champion Solution for Huawei Cloud HarmonyOS Agent Competition, featuring a data-centric paradigm and end-to-end architecture optimization." />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="../../logo.png" />
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --card: #121212;
+      --text: #f8f8f8;
+      --muted: #c9c9c9;
+      --brand: #7BA05B;
+      --brand-2: #5C8A47;
+      --ring: rgba(123,160,91,.35);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --maxw: 1100px;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f6fff2;
+        --card: #f2faec;
+        --text: #1a1a1a;
+        --muted: #5a5a5a;
+        --shadow: 0 10px 30px rgba(0,0,0,.08);
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color: var(--text);
+      background: url('../../img/bg.png') center center / cover no-repeat fixed, var(--bg);
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+
+    /* Nav */
+    .nav { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(140%) blur(10px); background: color-mix(in oklab, var(--bg) 85%, transparent); border-bottom: 1px solid color-mix(in oklab, var(--brand) 25%, transparent); }
+    .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:700; }
+    .brand .dot { width:10px; height:10px; border-radius:50%; background: linear-gradient(90deg, var(--brand), var(--brand-2)); box-shadow: 0 0 0 4px var(--ring); }
+    .nav-links { display:flex; gap:18px; }
+    .btn { display:inline-flex; align-items:center; gap:6px; padding:10px 14px; border-radius:999px; border:1px solid color-mix(in oklab, var(--brand) 45%, transparent); background: color-mix(in oklab, var(--card) 80%, transparent); box-shadow: var(--shadow); }
+    .btn:hover { transform: translateY(-1px); }
+
+    /* Hero */
+    .hero { display:grid; grid-template-columns: 1.1fr .9fr; gap:28px; align-items:center; padding: 40px 0 24px; }
+    .hero-card { background: var(--card); border: 1px solid color-mix(in oklab, var(--brand) 20%, transparent); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); }
+    .title { font-size: clamp(28px, 4vw, 44px); font-weight:800; margin:0 0 12px; }
+    .subtitle { color: var(--muted); font-size: clamp(15px, 1.6vw, 18px); line-height:1.6; }
+
+    /* Section */
+    .section { padding:30px 0; }
+    .sec-title { font-size:22px; font-weight:800; margin-bottom:14px; }
+
+    .grid { display:grid; grid-template-columns: repeat(12, 1fr); gap:18px; }
+    .card { grid-column: span 12; border-radius: var(--radius); padding:20px; background: var(--card); border:1px solid color-mix(in oklab, var(--brand) 18%, transparent); box-shadow: var(--shadow); }
+
+    .screenshot { width:100%; border-radius:12px; box-shadow: var(--shadow); border: 1px solid color-mix(in oklab, var(--brand) 15%, transparent); }
+
+    .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; background: color-mix(in oklab, var(--brand) 15%, transparent); color: var(--brand); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+
+    /* Custom highlight for this project */
+    .highlight-box {
+      background: linear-gradient(135deg, color-mix(in oklab, var(--brand) 10%, transparent), transparent);
+      border-left: 4px solid var(--brand);
+      padding: 16px;
+      margin: 16px 0;
+      border-radius: 4px;
+    }
+
+    footer { margin:40px 0 10px; color:var(--muted); font-size:14px; display:flex; justify-content:center; }
+
+    @media (max-width: 900px){ .hero{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../../en/index.html"><span class="dot"></span><span>🍵 Yonom1 · Home</span></a>
+    <nav class="nav-links">
+      <a class="btn" href="../../en/index.html#about">🙋 About</a>
+      <a class="btn" href="../../en/project.html">📂 Projects</a>
+      <a class="btn" href="../../en/index.html#contact">📧 Contact</a>
+      <a class="btn" href="../../en/introduce.html">📝 Blog</a>
+      <a class="btn" href="../../en/links.html">🔗 Links</a>
+      <a class="btn" href="../../project/lumina-agent.html" aria-label="Chinese version">ZH</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-card">
+      <span class="tag">🏆 Champion Solution (Rank 1)</span>
+      <h1 class="title">💡 Lumina-Agent</h1>
+      <p class="subtitle">Huawei Cloud HarmonyOS Agent Competition Champion Solution. A data-centric, memory-aware end-to-end voice command system.</p>
+      <p style="margin-top:18px;">
+        <a href="https://github.com/LYZ0306/Lumina-Agent" target="_blank" rel="noopener" class="btn">🌐 GitHub Repo</a>
+        <a href="https://github.com/LYZ0306/Lumina-Agent/blob/main/docs/Lumina-Agent_Final_Presentation.pdf" target="_blank" rel="noopener" class="btn">📄 View Presentation</a>
+      </p>
+    </div>
+    <figure>
+      <img src="../../img/lumina.png" alt="Lumina-Agent Screenshot" class="screenshot">
+    </figure>
+  </section>
+
+  <!-- Introduction -->
+  <section class="section">
+    <h2 class="sec-title">📖 Introduction</h2>
+    <div class="card">
+      <p>Lumina-Agent is a solution designed for the "Huawei Cloud HarmonyOS System Control Agent Competition," addressing strict resource constraints (5GB NPU memory) and complex multi-turn logic. We bypassed complex RAG or Hierarchical architectures, proposing a <strong>Minimalist, Data-Centric, and NPU-Optimized End-to-End Architecture</strong>.</p>
+      
+      <figure style="margin: 24px 0 12px;">
+        <img src="https://raw.githubusercontent.com/LYZ0306/Lumina-Agent/main/assets/architecture.png" style="width:100%; border-radius:8px; border:1px solid color-mix(in oklab, var(--brand) 15%, transparent);" alt="Lumina-Agent Architecture">
+        <figcaption style="text-align:center; color:var(--muted); font-size:13px; margin-top:8px;">Flat-Direct Paradigm of Lumina-Agent Architecture</figcaption>
+      </figure>
+
+      <p>By leveraging Semantic Prompt Compression, State Differential Reasoning, and a Mixture-of-Experts (MoE) Data Pipeline, we achieved <strong>100% accuracy on the local smoke test set</strong> and ranked <strong>No.1 in the finals</strong> using only a 1.7B parameter model.</p>
+      
+      <div class="highlight-box">
+        <h4>👥 Core Team</h4>
+        <ul>
+          <li><strong>Lv Yuze</strong>: Team Leader; Architecture Design & Algorithm Optimization</li>
+          <li><strong>Shi Yixi</strong>: Data Engineering & Anti-Hallucination</li>
+          <li><strong>Liu Xiaorui</strong>: System Deployment & Memory Optimization</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Innovations -->
+  <section class="section">
+    <h2 class="sec-title">🚀 Key Innovations</h2>
+    <div class="grid">
+      <div class="card" style="grid-column: span 6;">
+        <h3>🧠 Flat-Direct Architecture</h3>
+        <p>Allowed us to avoid double inference latency and error cascading. We used a Direct Agent for one-pass inference, maximizing global attention visibility and minimizing latency.</p>
+      </div>
+      <div class="card" style="grid-column: span 6;">
+        <h3>⚡ Memory-Aware Compression</h3>
+        <p>To fit 100+ tools into the 5GB NPU limit: Extracted "Verb + Object" cores via Semantic Distillation. Compressed context from 20k to 5k tokens, speeding up inference by 40%.</p>
+      </div>
+      <div class="card" style="grid-column: span 6;">
+        <h3>🏗️ Training on Consumer GPUs</h3>
+        <p>Trained 6k context on RTX 3090 (24GB): Gradient Checkpointing reduced memory by 60%. Full-Linear LoRA fine-tuning enhanced logic w/o forgetting. Full BF16 pipeline aligned with NPU.</p>
+      </div>
+      <div class="card" style="grid-column: span 6;">
+        <h3>📊 MoE Data Pipeline</h3>
+        <p>Constructed a 20,000+ sample dataset with "Resampling Layer", "Logic Layer" (GPT-4 logic), and "Concurrency Layer", effectively solving multi-instruction scenarios and hallucinations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="section">
+    <h2 class="sec-title">📈 Competition Results</h2>
+    <div class="grid">
+      <div class="card" style="grid-column: span 12;">
+        <ul>
+          <li><strong>Final Rank</strong>: 1st Place (Champion)</li>
+          <li><strong>Local Accuracy</strong>: 100% (Smoke Test)</li>
+          <li><strong>Complex Logic Acc</strong>: >90%</li>
+        </ul>
+        <img src="https://raw.githubusercontent.com/LYZ0306/Lumina-Agent/main/assets/exp_result.png" style="width:100%; margin-top:16px; border-radius:8px;" alt="Experiment Results">
+      </div>
+    </div>
+  </section>
+
+  <div class="container" style="text-align:center; margin: 10px 0 0;">
+    <a href="../../en/project.html" class="btn">📂 Projects</a>
+    <a href="../../en/index.html" class="btn" style="margin-left:8px;">🏠 Home</a>
+  </div>
+</main>
+
+<footer>
+  <div class="container">🌱 <strong>Stay hungry, stay foolish.</strong></div>
+</footer>
+</body>
+</html>
