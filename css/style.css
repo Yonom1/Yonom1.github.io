@@ -38,7 +38,8 @@ body.home-page::before {
 	*/
 	filter: blur(calc(var(--scroll-ratio, 0) * 8px)) brightness(calc(0.8 - var(--scroll-ratio, 0) * 0.4));
 	transform: scale(calc(1 + var(--scroll-ratio, 0) * 0.1));
-	transition: filter 0.1s linear, transform 0.1s linear; /* Smooth update */
+	/* transition toggled off to prevent flickering during scroll */
+	/* transition: filter 0.1s linear, transform 0.1s linear; */ 
 	pointer-events: none;
 	will-change: transform, filter;
 }

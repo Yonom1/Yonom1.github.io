@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Only verify if we are on the home page for parallax
     if (document.body.classList.contains('home-page')) {
+        let ticking = false;
+
         const updateScroll = () => {
             // 计算滚动进度：0 到 1 (在滚动 500px 时达到最大效果)
             const scrolled = window.scrollY;
@@ -28,9 +30,17 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // 设置 CSS 变量，供样式表使用
             document.body.style.setProperty('--scroll-ratio', ratio);
+            ticking = false;
         };
 
-        window.addEventListener('scroll', updateScroll, { passive: true });
+        const onScroll = () => {
+            if (!ticking) {
+                window.requestAnimationFrame(updateScroll);
+                ticking = true;
+            }
+        };
+
+        window.addEventListener('scroll', onScroll, { passive: true });
         updateScroll(); // 初始化
     }
 });
