@@ -208,15 +208,15 @@ footer { margin:40px 0 10px; color:var(--muted); font-size:14px; display:flex; j
 	transition: 0.3s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 	.mobile-menu-btn {
 		display: block;
 	}
 
 	.nav-links {
 		display: none; /* Hide by default on mobile */
-		position: fixed;
-		top: 72px; /* Approx header height */
+		position: absolute; /* Using absolute relative to the sticky header */
+		top: 100%;
 		left: 0;
 		right: 0;
 		background: rgba(11, 11, 11, 0.98);
@@ -226,13 +226,13 @@ footer { margin:40px 0 10px; color:var(--muted); font-size:14px; display:flex; j
 		padding: 24px 0;
 		gap: 20px;
 		border-bottom: 1px solid var(--brand);
-        	z-index: 49;
+        	z-index: 1000; /* Ensure it's on top */
 		box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 	}
 
 	/* Separate rule to override display:none when active */
 	.nav-links.active {
-		display: flex;
+		display: flex !important;
 		animation: slideDown 0.3s ease-out;
 	}
 
