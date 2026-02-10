@@ -7,70 +7,7 @@
 	<meta name="description" content="Yonom1 · Blog list and categories" />
 	<meta name="color-scheme" content="light dark" />
 	<link rel="icon" href="../logo.png" />
-	<style>
-		:root {
-			--bg: #0b0b0b;
-			--card: #121212;
-			--text: #f8f8f8;
-			--muted: #c9c9c9;
-			--brand: #7BA05B;
-			--brand-2: #5C8A47;
-			--ring: rgba(123, 160, 91, .35);
-			--shadow: 0 10px 30px rgba(0,0,0,.35);
-			--radius: 16px;
-			--maxw: 1100px;
-		}
-		@media (prefers-color-scheme: light) {
-			:root {
-				--bg: #f6fff2;
-				--card: #f2faec;
-				--text: #1a1a1a;
-				--muted: #5a5a5a;
-				--shadow: 0 10px 30px rgba(0,0,0,.08);
-			}
-		}
-		* { box-sizing: border-box; }
-		body {
-			margin: 0;
-			font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-			color: var(--text);
-			background: url('../img/bg.png') center center / cover no-repeat fixed, var(--bg);
-		}
-		a { color: inherit; text-decoration: none; }
-		.container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
-
-		.nav { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(140%) blur(10px); background: color-mix(in oklab, var(--bg) 85%, transparent); border-bottom: 1px solid color-mix(in oklab, var(--brand) 25%, transparent); }
-		.nav-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
-		.brand { display:flex; align-items:center; gap:12px; font-weight:700; }
-		.brand .dot { width:10px; height:10px; border-radius:50%; background: linear-gradient(90deg, var(--brand), var(--brand-2)); box-shadow: 0 0 0 4px var(--ring); }
-		.nav-links { display:flex; gap:18px; }
-		.btn { display:inline-flex; align-items:center; gap:6px; padding:10px 14px; border-radius:999px; border:1px solid color-mix(in oklab, var(--brand) 45%, transparent); background: color-mix(in oklab, var(--card) 80%, transparent); box-shadow: var(--shadow); }
-		.btn:hover { transform: translateY(-1px); }
-
-		.page-head { display:flex; align-items:center; gap:18px; padding: 28px 0 12px; }
-		.page-head .logo { width:56px; height:56px; border-radius:14px; overflow:hidden; border: 1px solid color-mix(in oklab, var(--brand) 25%, transparent); box-shadow: var(--shadow); }
-		.page-head .logo img { width:100%; height:100%; object-fit: cover; }
-		.page-title { font-size: clamp(26px, 3.2vw, 36px); font-weight: 800; margin: 0; }
-		.page-sub { color: var(--muted); margin: 4px 0 0; }
-
-		.section { padding: 6px 0 28px; }
-		.sec-title { font-size: 20px; font-weight: 800; margin: 0 0 14px; }
-		.grid { display:grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
-
-		.card { grid-column: span 6; border-radius: var(--radius); padding: 18px; background: var(--card); border:1px solid color-mix(in oklab, var(--brand) 18%, transparent); box-shadow: var(--shadow); }
-		.card h3 { margin: 0 0 6px; }
-		.muted { color: var(--muted); }
-
-		.post { display:flex; gap:14px; padding:12px; border:1px solid color-mix(in oklab, var(--brand) 22%, transparent); border-radius: 12px; background: color-mix(in oklab, var(--card) 96%, transparent); }
-		.post:hover { transform: translateY(-1px); }
-		.dot { width:10px; height:10px; margin-top:8px; border-radius:50%; background: linear-gradient(90deg, var(--brand), var(--brand-2)); box-shadow: 0 0 0 6px var(--ring); flex: 0 0 auto; }
-		.post-title { font-weight: 700; }
-		.post-meta { color: var(--muted); font-size: 13px; margin-top: 2px; }
-
-		footer { margin:40px 0 10px; color:var(--muted); font-size:14px; display:flex; justify-content:center; }
-
-		@media (max-width: 900px) { .card { grid-column: span 12; } }
-	</style>
+	<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 <header class="nav">
@@ -149,5 +86,6 @@
 <footer>
 	<div class="container">🌱 <strong>Stay hungry, stay foolish.</strong></div>
 </footer>
+<script src="../js/scroll.js"></script>
 </body>
 </html>
