@@ -22,12 +22,16 @@ My interests lie where 3D worlds meet intelligent systems: reliable scene recons
 ## Updates
 
 <ul class="news-list">
+  <li><span class="news-date">2026.03</span>NJUIS-Wiki received its first public introduction. As one of its original contributors, I continue to work on curriculum plans and course guides.</li>
   <li><span class="news-date">2025.12</span>Won the Huawei HarmonyOS System Control Agent Competition; worked on deployment and memory optimization.</li>
   <li><span class="news-date">2025.10</span>Completed the NJU-3DV onboarding project on geometry-supervised 3D Gaussian Splatting.</li>
   <li><span class="news-date">2025.04</span>Received the Outstanding Youth League Member award at Nanjing University.</li>
 </ul>
 
 ## Selected projects
+
+### [NJUIS-Wiki](/en/project/njuis-wiki.html)
+A student-maintained knowledge base for the School of Intelligence Science and Technology at Nanjing University. I am one of its original contributors, focusing on curriculum plans and course guides. `Student Service · Open Source · 2026`
 
 ### [Lumina-Agent](/en/project/lumina-agent.html)
 Champion solution for the Huawei HarmonyOS System Control Agent Competition. `Competition · 2025`

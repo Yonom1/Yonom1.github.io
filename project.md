@@ -10,6 +10,10 @@ translation_url: /en/project.html
 
 <div class="project-list">
   <article class="project-card">
+    <a href="/project/njuis-wiki.html"><img src="/img/njuis-wiki.png" alt="智科全家桶网站界面"></a>
+    <div><h2><a href="/project/njuis-wiki.html">智科全家桶（NJUIS-Wiki）</a></h2><p>由南京大学智科学生自发共建的民间知识库，沉淀学院信息、培养方案、课程攻略与成长经验。</p><div class="project-meta">学生服务 · 开源共建 · 2026 · 持续维护</div></div>
+  </article>
+  <article class="project-card">
     <a href="/project/lumina-agent.html"><img src="/img/lumina.png" alt="Lumina-Agent 项目封面"></a>
     <div><h2><a href="/project/lumina-agent.html">Lumina-Agent</a></h2><p>华为鸿蒙系统操控 Agent 竞赛冠军方案：以数据为中心、针对 NPU 显存约束优化的端到端语音指令系统。</p><div class="project-meta">竞赛项目 · 2025 · 冠军</div></div>
   </article>

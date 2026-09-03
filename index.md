@@ -29,12 +29,17 @@ author_profile: true
 ## 近况
 
 <ul class="news-list">
+  <li><span class="news-date">2026.03</span>智科全家桶（NJUIS-Wiki）首次公开宣传；作为原始贡献者之一，持续参与培养方案与课程攻略建设。</li>
   <li><span class="news-date">2025.12</span>获得华为“鸿蒙系统操控 Agent 竞赛”冠军，负责系统部署与显存优化。</li>
   <li><span class="news-date">2025.10</span>完成 NJU-3DV 入组项目阶段汇报，探索几何监督的 3D Gaussian Splatting。</li>
   <li><span class="news-date">2025.04</span>获评南京大学“五四”优秀团员。</li>
 </ul>
 
 ## 精选项目
+
+### [智科全家桶（NJUIS-Wiki）](/project/njuis-wiki.html)
+
+南京大学智能科学与技术学院学生共同维护的民间知识库；作为原始贡献者之一，负责培养方案与课程攻略。`Student Service · Open Source · 2026`
 
 ### [Lumina-Agent](/project/lumina-agent.html)
 
