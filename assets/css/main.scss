@@ -111,6 +111,8 @@ a:hover { color: #0d516b; }
   height: 172px;
   object-fit: cover;
   object-position: 50% 24%;
+  image-rendering: auto;
+  -ms-interpolation-mode: bicubic;
   border: 3px solid #fff;
   border-radius: 50%;
   box-shadow: 0 8px 22px rgba(25, 75, 91, 0.15);
@@ -242,11 +244,87 @@ a:hover { color: #0d516b; }
   background: #f7f9fa;
 }
 
+@media (max-width: 64em) {
+  #main {
+    margin-top: 1rem;
+    padding-inline: 1rem;
+  }
+
+  .sidebar,
+  .sidebar.sticky {
+    position: static !important;
+    top: auto;
+    width: 100%;
+    margin: 0 0 1rem;
+    padding: 0.8rem 0;
+    overflow: visible;
+  }
+
+  .sidebar .h-card {
+    display: grid;
+    grid-template-columns: 172px minmax(0, 1fr);
+    grid-template-areas:
+      "avatar content"
+      "avatar links";
+    gap: 0.4rem 1.5rem;
+    align-items: center;
+  }
+
+  .author__avatar {
+    grid-area: avatar;
+    width: 172px;
+    margin: 0;
+  }
+
+  .author__content {
+    grid-area: content;
+    align-self: end;
+  }
+
+  .author__urls-wrapper {
+    grid-area: links;
+    align-self: start;
+  }
+
+  .author__urls-wrapper button { display: none; }
+
+  .author__urls {
+    position: static;
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.1rem;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .author__urls::before,
+  .author__urls::after { display: none; }
+  .author__urls li { white-space: nowrap; }
+
+  .page {
+    float: none;
+    width: 100%;
+    margin-top: 0;
+    padding: clamp(1.2rem, 3vw, 2.2rem);
+  }
+}
+
 @media (max-width: 700px) {
   .masthead__inner-wrap { padding-top: 0.6em; padding-bottom: 0.6em; }
   #main { margin-top: 0.75em; padding-inline: 0.75rem; }
   .page { margin-top: 0.9rem; padding: 1rem; border-radius: 12px; }
   .sidebar { padding: 0.8rem; }
+  .sidebar .h-card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "avatar"
+      "content"
+      "links";
+    gap: 0.55rem;
+  }
   .author__avatar {
     width: 140px;
     margin: 0 auto 1rem;
@@ -257,6 +335,8 @@ a:hover { color: #0d516b; }
     width: 140px;
     height: 140px;
   }
+  .author__content { text-align: center; }
+  .author__urls { justify-content: center; }
   .project-card { grid-template-columns: 1fr; gap: 0.8rem; }
   .friend-grid { grid-template-columns: 1fr; }
   .news-date { width: auto; margin-right: 0.55rem; }
