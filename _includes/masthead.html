@@ -12,6 +12,12 @@
   {% assign brand_subtitle = site.subtitle %}
   {% assign brand_url = '/' %}
 {% endif %}
+{% if is_english %}
+  {% assign language_url = page.url | remove_first: '/en' %}
+  {% if language_url == '' %}{% assign language_url = '/' %}{% endif %}
+{% else %}
+  {% assign language_url = page.url | prepend: '/en' %}
+{% endif %}
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
@@ -23,8 +29,12 @@
         </a>
         <ul class="visible-links">
           {%- for link in navigation -%}
+            {% assign item_url = link.url %}
+            {% if link.title == 'English' or link.title == '中文' %}
+              {% assign item_url = language_url %}
+            {% endif %}
             <li class="masthead__menu-item">
-              <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}{% if link.target %} target="{{ link.target }}"{% endif %}>{{ link.title }}</a>
+              <a href="{{ item_url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}{% if link.target %} target="{{ link.target }}"{% endif %}>{{ link.title }}</a>
             </li>
           {%- endfor -%}
         </ul>
