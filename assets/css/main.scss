@@ -78,10 +78,21 @@ a:hover { color: #0d516b; }
 }
 
 .no-author-profile .page {
+  display: flow-root;
   float: none;
   width: min(100%, 1120px);
   margin-right: auto;
   margin-left: auto;
+}
+
+.no-author-profile .page .page__inner-wrap,
+.no-author-profile .page .page__content {
+  float: none;
+  clear: none;
+}
+
+.no-author-profile .page .page__inner-wrap {
+  display: flow-root;
 }
 
 .page .page__inner-wrap {
