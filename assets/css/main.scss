@@ -105,6 +105,8 @@ a:hover { color: #0d516b; }
 .author__avatar a { display: block; }
 
 .author__avatar img {
+  min-width: 172px;
+  max-width: 172px !important;
   width: 172px;
   height: 172px;
   object-fit: cover;
@@ -249,7 +251,12 @@ a:hover { color: #0d516b; }
     width: 140px;
     margin: 0 auto 1rem;
   }
-  .author__avatar img { width: 140px; height: 140px; }
+  .author__avatar img {
+    min-width: 140px;
+    max-width: 140px !important;
+    width: 140px;
+    height: 140px;
+  }
   .project-card { grid-template-columns: 1fr; gap: 0.8rem; }
   .friend-grid { grid-template-columns: 1fr; }
   .news-date { width: auto; margin-right: 0.55rem; }
