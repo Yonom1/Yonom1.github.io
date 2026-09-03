@@ -2,6 +2,8 @@
 title: 类异形工厂游戏
 permalink: /project/shapez.html
 description: 自学 Qt 后独立完成的工厂建造类 GUI 项目。
+lang: zh
+translation_url: /en/project/shapez.html
 ---
 
 <img class="project-hero" src="/img/shapez.png" alt="类异形工厂游戏截图">

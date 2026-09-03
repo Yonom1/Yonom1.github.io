@@ -1,6 +1,6 @@
 {% assign locale = include.locale | default: page.locale | default: site.locale %}
 {% assign is_english = false %}
-{% if page.url contains '/en/' %}{% assign is_english = true %}{% endif %}
+{% if page.lang == 'en' or page.url contains '/en/' %}{% assign is_english = true %}{% endif %}
 {% if is_english %}
   {% assign navigation = site.data.navigation.en %}
   {% assign brand_title = 'Xiaorui Liu' %}
@@ -12,12 +12,15 @@
   {% assign brand_subtitle = site.subtitle %}
   {% assign brand_url = '/' %}
 {% endif %}
-{% if is_english %}
-  {% assign language_url = page.url | remove_first: '/en' %}
-  {% if language_url == '' %}{% assign language_url = '/' %}{% endif %}
-{% else %}
-  {% assign language_url = page.url | prepend: '/en' %}
-{% endif %}
+{% assign language_url = page.translation_url %}
+{% unless language_url %}
+  {% if is_english %}
+    {% assign language_url = page.url | remove_first: '/en' %}
+    {% if language_url == '' %}{% assign language_url = '/' %}{% endif %}
+  {% else %}
+    {% assign language_url = page.url | prepend: '/en' %}
+  {% endif %}
+{% endunless %}
 
 <div class="masthead">
   <div class="masthead__inner-wrap">

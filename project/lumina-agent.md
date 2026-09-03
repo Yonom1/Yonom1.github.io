@@ -2,6 +2,8 @@
 title: Lumina-Agent
 permalink: /project/lumina-agent.html
 description: 华为鸿蒙系统操控 Agent 竞赛冠军方案。
+lang: zh
+translation_url: /en/project/lumina-agent.html
 header:
   teaser: /img/lumina.png
 ---

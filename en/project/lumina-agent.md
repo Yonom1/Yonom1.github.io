@@ -2,6 +2,8 @@
 title: Lumina-Agent
 permalink: /en/project/lumina-agent.html
 description: Champion solution for the Huawei HarmonyOS System Control Agent Competition.
+lang: en
+translation_url: /project/lumina-agent.html
 ---
 
 <img class="project-hero" src="/img/lumina.png" alt="Lumina-Agent cover">

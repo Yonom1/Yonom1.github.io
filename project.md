@@ -2,6 +2,8 @@
 title: 项目
 permalink: /project.html
 description: 刘晓睿的研究、竞赛与课程项目。
+lang: zh
+translation_url: /en/project.html
 ---
 
 这里按时间倒序记录我做过的研究、竞赛与课程项目。

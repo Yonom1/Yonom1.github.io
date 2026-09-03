@@ -2,6 +2,8 @@
 title: "Hello, I’m Xiaorui Liu"
 permalink: /en/
 description: Undergraduate at Nanjing University, interested in 3D vision, reconstruction, and AI agents.
+lang: en
+translation_url: /
 ---
 
 <p class="intro">I am an undergraduate student at the <strong>School of Intelligence Science and Technology, Nanjing University</strong>. I am currently receiving early research training in the NJU-3DV Lab under the supervision of <a href="https://yoyo000.github.io/" target="_blank" rel="noopener">Prof. Yao Yao</a>.</p>

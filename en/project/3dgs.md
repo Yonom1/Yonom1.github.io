@@ -1,6 +1,8 @@
 ---
 title: Geometry-Supervised 3D Gaussian Splatting
 permalink: /en/project/3dgs.html
+lang: en
+translation_url: /project/3dgs.html
 ---
 
 <img class="project-hero" src="/img/3dgs.png" alt="3DGS project screenshot">

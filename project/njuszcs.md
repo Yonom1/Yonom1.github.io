@@ -2,6 +2,8 @@
 title: NJUSZ-CS
 permalink: /project/njuszcs.html
 description: 使用 Qt6 开发的南京大学校园食堂模拟器。
+lang: zh
+translation_url: /en/project/njuszcs.html
 ---
 
 <img class="project-hero" src="/img/njusz.png" alt="NJUSZ-CS 游戏截图">

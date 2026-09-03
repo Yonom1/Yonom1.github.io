@@ -2,6 +2,8 @@
 title: Projects
 permalink: /en/project.html
 description: Research, competition, and course projects by Xiaorui Liu.
+lang: en
+translation_url: /project.html
 ---
 
 <div class="project-list">

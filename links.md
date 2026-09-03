@@ -2,6 +2,8 @@
 title: 友情链接
 permalink: /links.html
 description: 朋友们的个人网站。
+lang: zh
+translation_url: /en/links.html
 ---
 
 互相链接，互相鼓励。下面是朋友们的个人网站。

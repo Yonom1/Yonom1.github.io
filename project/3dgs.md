@@ -2,6 +2,8 @@
 title: 几何监督的 3D Gaussian Splatting
 permalink: /project/3dgs.html
 description: NJU-3DV 入组项目，探索几何监督与时序一致性约束。
+lang: zh
+translation_url: /en/project/3dgs.html
 ---
 
 <img class="project-hero" src="/img/3dgs.png" alt="3D Gaussian Splatting 项目截图">

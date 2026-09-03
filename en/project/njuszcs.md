@@ -1,6 +1,8 @@
 ---
 title: NJUSZ-CS
 permalink: /en/project/njuszcs.html
+lang: en
+translation_url: /project/njuszcs.html
 ---
 
 <img class="project-hero" src="/img/njusz.png" alt="NJUSZ-CS screenshot">

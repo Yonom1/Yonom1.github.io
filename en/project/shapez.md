@@ -1,6 +1,8 @@
 ---
 title: ShapeZ-like Factory Game
 permalink: /en/project/shapez.html
+lang: en
+translation_url: /project/shapez.html
 ---
 
 <img class="project-hero" src="/img/shapez.png" alt="ShapeZ-like factory game screenshot">
