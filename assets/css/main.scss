@@ -122,6 +122,31 @@ a:hover { color: #0d516b; }
 
 .page__content h3 { font-size: 1.08em; }
 
+.page__title,
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.page__content h4,
+.page__content h5,
+.page__content h6 {
+  color: var(--site-accent-dark);
+}
+
+.page__content h1 a,
+.page__content h2 a,
+.page__content h3 a,
+.page__content h4 a,
+.page__content h5 a,
+.page__content h6 a,
+.page__content h1 a:visited,
+.page__content h2 a:visited,
+.page__content h3 a:visited,
+.page__content h4 a:visited,
+.page__content h5 a:visited,
+.page__content h6 a:visited {
+  color: var(--site-accent);
+}
+
 .author__avatar {
   display: block;
   width: 172px;
