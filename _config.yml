@@ -37,7 +37,7 @@ defaults:
       path: ""
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       toc: false
   - scope:
       path: "en"

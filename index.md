@@ -4,6 +4,7 @@ permalink: /
 description: 南京大学智能科学与技术学院本科生，关注 3D 视觉、三维重建与智能体。
 lang: zh
 translation_url: /en/
+author_profile: true
 ---
 
 <p class="intro">我目前就读于<strong>南京大学智能科学与技术学院</strong>，正在 NJU-3DV Lab 接受早期科研训练，师从<a href="https://yoyo000.github.io/" target="_blank" rel="noopener">姚遥教授</a>。</p>
