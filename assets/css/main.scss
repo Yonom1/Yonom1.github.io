@@ -17,7 +17,14 @@ search: false
   --site-line: #dbe5e9;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+.page__content [id] {
+  scroll-margin-top: 7rem;
+}
 
 body {
   color: var(--site-ink);
