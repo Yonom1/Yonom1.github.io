@@ -1,0 +1,39 @@
+{% assign locale = include.locale | default: page.locale | default: site.locale %}
+{% assign is_english = false %}
+{% if page.url contains '/en/' %}{% assign is_english = true %}{% endif %}
+{% if is_english %}
+  {% assign navigation = site.data.navigation.en %}
+  {% assign brand_title = 'Xiaorui Liu' %}
+  {% assign brand_subtitle = 'Personal Homepage' %}
+  {% assign brand_url = '/en/' %}
+{% else %}
+  {% assign navigation = site.data.navigation.main %}
+  {% assign brand_title = site.masthead_title | default: site.title %}
+  {% assign brand_subtitle = site.subtitle %}
+  {% assign brand_url = '/' %}
+{% endif %}
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
+        <a class="site-title" href="{{ brand_url | relative_url }}">
+          {{ brand_title | escape_once | strip }}
+          <span class="site-subtitle">{{ brand_subtitle | escape_once | strip }}</span>
+        </a>
+        <ul class="visible-links">
+          {%- for link in navigation -%}
+            <li class="masthead__menu-item">
+              <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}{% if link.target %} target="{{ link.target }}"{% endif %}>{{ link.title }}</a>
+            </li>
+          {%- endfor -%}
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">{{ site.data.ui-text[locale].menu_label | default: "Toggle menu" }}</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>

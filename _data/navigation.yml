@@ -7,3 +7,13 @@ main:
     url: /links.html
   - title: English
     url: /en/
+
+en:
+  - title: Home
+    url: /en/
+  - title: Projects
+    url: /en/project.html
+  - title: Friends
+    url: /en/links.html
+  - title: 中文
+    url: /

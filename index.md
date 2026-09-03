@@ -6,7 +6,7 @@ description: 南京大学智能科学与技术学院本科生，关注 3D 视觉
 
 <p class="intro">我目前就读于<strong>南京大学智能科学与技术学院</strong>，正在 NJU-3DV Lab 接受早期科研训练，师从<a href="https://yoyo000.github.io/" target="_blank" rel="noopener">姚遥教授</a>。</p>
 
-我的兴趣落在三维世界与智能系统的交界处：如何更可靠地重建、理解并生成三维场景，以及如何让智能体在真实约束下完成任务。这个网站记录我的研究训练、项目与阶段性思考。
+我的兴趣落在三维世界与智能系统的交界处：如何更可靠地重建与理解三维场景，以及如何让智能体在真实约束下完成任务。这个网站记录我的研究训练、项目与阶段性思考。
 
 如果你对相近的问题感兴趣，欢迎给我写信：<a href="mailto:XiaoruiLiu@smail.nju.edu.cn">XiaoruiLiu@smail.nju.edu.cn</a>。
 
@@ -16,9 +16,12 @@ description: 南京大学智能科学与技术学院本科生，关注 3D 视觉
   <li>3D Vision</li>
   <li>3D Reconstruction</li>
   <li>Gaussian Splatting</li>
-  <li>Generative Models</li>
   <li>AI Agents</li>
 </ul>
+
+## 教育经历
+
+- **2023.09 — 至今**　南京大学，智能科学与技术学院，本科
 
 ## 近况
 
@@ -44,9 +47,8 @@ NJU-3DV 入组项目：结合深度先验、光流监督与渲染管线改造，
 
 [查看全部项目 →](/project.html)
 
-## 教育经历与荣誉
+## 荣誉
 
-- **2023.09 — 至今**　南京大学，智能科学与技术学院，本科
 - **2025.11**　南京大学人民奖学金三等奖
 - **2025.04**　南京大学“五四”优秀团员
 - **2024.11**　南京大学人民奖学金三等奖

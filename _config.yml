@@ -14,7 +14,7 @@ author:
   name: 刘晓睿
   avatar: /img/logo.png
   bio: 南京大学智能科学与技术学院本科生。关注 3D 视觉、三维重建与智能体。
-  location: 南京 / 苏州
+  location: 苏州
   links:
     - label: Email
       icon: fas fa-fw fa-envelope
@@ -39,6 +39,11 @@ defaults:
       layout: single
       author_profile: true
       toc: false
+  - scope:
+      path: "en"
+    values:
+      author: xiaorui_en
+      locale: en-US
 
 markdown: kramdown
 kramdown:
