@@ -31,7 +31,7 @@ My interests lie where 3D worlds meet intelligent systems: reliable scene recons
 ## Selected projects
 
 ### [NJUIS-Wiki](/en/project/njuis-wiki.html)
-A student-maintained knowledge base for the School of Intelligence Science and Technology at Nanjing University. I am one of its original contributors, focusing on curriculum plans and course guides. `Student Service · Open Source · 2026`
+A student-maintained knowledge base for the School of Intelligence Science and Technology at Nanjing University. I am one of its original contributors, focusing on curriculum plans and course guides. `Student Service · 2026`
 
 ### [Lumina-Agent](/en/project/lumina-agent.html)
 Champion solution for the Huawei HarmonyOS System Control Agent Competition. `Competition · 2025`

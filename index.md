@@ -39,7 +39,7 @@ author_profile: true
 
 ### [智科全家桶（NJUIS-Wiki）](/project/njuis-wiki.html)
 
-南京大学智能科学与技术学院学生共同维护的民间知识库；作为原始贡献者之一，负责培养方案与课程攻略。`Student Service · Open Source · 2026`
+南京大学智能科学与技术学院学生共同维护的民间知识库；作为原始贡献者之一，负责培养方案与课程攻略。`Student Service · 2026`
 
 ### [Lumina-Agent](/project/lumina-agent.html)
 

@@ -35,6 +35,7 @@ body {
 }
 
 a { color: var(--site-accent); }
+a:visited { color: var(--site-accent); }
 a:hover { color: #0d516b; }
 
 .masthead {
