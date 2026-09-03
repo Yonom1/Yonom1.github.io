@@ -1,0 +1,72 @@
+title: 刘晓睿
+title_separator: "·"
+subtitle: Xiaorui Liu
+description: 南京大学智能科学与技术学院本科生，关注 3D 视觉、三维重建与智能体。
+url: https://yonom1.github.io
+repository: Yonom1/Yonom1.github.io
+locale: zh-CN
+timezone: Asia/Shanghai
+
+remote_theme: mmistakes/minimal-mistakes@4.28.1
+minimal_mistakes_skin: air
+
+author:
+  name: 刘晓睿
+  avatar: /img/logo.png
+  bio: 南京大学智能科学与技术学院本科生。关注 3D 视觉、三维重建与智能体。
+  location: 南京 / 苏州
+  links:
+    - label: Email
+      icon: fas fa-fw fa-envelope
+      url: mailto:XiaoruiLiu@smail.nju.edu.cn
+    - label: GitHub
+      icon: fab fa-fw fa-github
+      url: https://github.com/Yonom1
+
+footer:
+  links:
+    - label: GitHub
+      icon: fab fa-fw fa-github
+      url: https://github.com/Yonom1
+    - label: Email
+      icon: fas fa-fw fa-envelope
+      url: mailto:XiaoruiLiu@smail.nju.edu.cn
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: single
+      author_profile: true
+      toc: false
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+
+permalink: pretty
+plugins:
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor
+
+include:
+  - _pages
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+search: false
+breadcrumbs: false
+atom_feed:
+  hide: true
