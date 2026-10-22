@@ -1,0 +1,38 @@
+{% assign language = page.lang | default: 'zh' %}
+{% assign profile = site.data.profile %}
+{% assign labels = profile.labels[language] %}
+{% assign project_index = '/project.html' %}
+{% if language == 'en' %}{% assign project_index = '/en/project.html' %}{% endif %}
+
+<div class="home-introduction">
+  {{ profile.intro[language] | markdownify }}
+  <div class="admission-note">{{ profile.admission[language] | markdownify }}</div>
+  <ul class="interest-list" aria-label="{{ labels.interests }}">
+    {% for interest in profile.interests %}<li>{{ interest | escape }}</li>{% endfor %}
+  </ul>
+</div>
+
+<h2 id="updates">{{ labels.news }}</h2>
+<ul class="news-list">
+  {% for item in site.data.news %}
+    <li><time class="news-date" datetime="{{ item.date | replace: '.', '-' }}">{{ item.date }}</time><span>{{ item[language] | escape }}</span></li>
+  {% endfor %}
+</ul>
+
+<h2 id="selected-projects">{{ labels.projects }}</h2>
+{% include project-list.html selected=true %}
+<p class="all-projects-link"><a href="{{ project_index | relative_url }}">{{ labels.all_projects }}</a></p>
+
+<h2 id="education">{{ labels.education }}</h2>
+<ul class="education-list">
+  {% for item in profile.education %}
+    <li><strong>{{ item.period[language] | escape }}</strong><span>{{ item.text[language] | escape }}</span></li>
+  {% endfor %}
+</ul>
+
+<h2 id="honors">{{ labels.honors }}</h2>
+<ul class="honors-list">
+  {% for item in site.data.honors %}
+    <li><time datetime="{{ item.date | replace: '.', '-' }}">{{ item.date }}</time><span>{{ item[language] | escape }}</span></li>
+  {% endfor %}
+</ul>

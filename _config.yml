@@ -1,8 +1,9 @@
 title: 刘晓睿
 title_separator: "·"
 subtitle: Xiaorui Liu
-description: 南京大学智能科学与技术学院本科生，关注 3D 视觉、三维重建与智能体。
+description: 南京大学本科生，在 Physical Intelligence Lab（PIL）接受科研训练；2027 年入学攻读姚遥老师的硕士。
 url: https://yonom1.github.io
+baseurl: ""
 repository: Yonom1/Yonom1.github.io
 locale: zh-CN
 timezone: Asia/Shanghai
@@ -12,8 +13,8 @@ minimal_mistakes_skin: air
 
 author:
   name: 刘晓睿
-  avatar: /img/logo.png
-  bio: 南京大学智能科学与技术学院本科生。关注 3D 视觉、三维重建与智能体。
+  avatar: /img/optimized/avatar.webp
+  bio: 南京大学本科生 · PIL 科研训练；2027 年硕士入学，导师：姚遥老师。
   location: 苏州
   links:
     - label: Email
@@ -66,6 +67,13 @@ exclude:
 
 include:
   - _pages
+
+social:
+  name: Xiaorui Liu
+  links:
+    - https://github.com/Yonom1
+
+og_image: /img/optimized/avatar.webp
 
 sass:
   sass_dir: _sass

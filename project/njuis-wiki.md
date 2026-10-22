@@ -6,8 +6,6 @@ lang: zh
 translation_url: /en/project/njuis-wiki.html
 ---
 
-<img class="project-hero" src="/img/njuis-wiki.png" alt="智科全家桶网站界面">
-
 <span class="project-tag">学生服务 · 开源共建 · 持续维护</span>
 
 智科全家桶是由南京大学智能科学与技术学院学生自发建设、共同维护的民间 Wiki。它希望把分散在不同年级与同学之间的经验沉淀为一份可检索、可更新、能够继续传承的公共知识库。
@@ -15,6 +13,8 @@ translation_url: /en/project/njuis-wiki.html
 [访问网站](https://njuis-students.github.io/){: .btn .btn--primary target="_blank" rel="noopener" }
 [GitHub 仓库](https://github.com/NJUIS-Students/NJUIS-Students.github.io){: .btn target="_blank" rel="noopener" }
 [贡献者名单](https://njuis-students.github.io/7-%E8%B4%A1%E7%8C%AE%E7%AF%87/3-%E8%B4%A1%E7%8C%AE%E8%80%85%E5%90%8D%E5%8D%95.html){: .btn target="_blank" rel="noopener" }
+
+<img class="project-hero" src="/img/optimized/njuis-wiki.webp" alt="智科全家桶网站界面" width="1280" height="730" loading="lazy" decoding="async">
 
 ## 为什么参与
 

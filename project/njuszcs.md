@@ -6,11 +6,11 @@ lang: zh
 translation_url: /en/project/njuszcs.html
 ---
 
-<img class="project-hero" src="/img/njusz.png" alt="NJUSZ-CS 游戏截图">
-
 <span class="project-tag">Course Project · 94.2</span>
 
 NJUSZ-Canteen Simulator 是南京大学智能科学与技术学院《程序设计实训》课程小组项目。玩家扮演新任食堂经理，在经营过程中处理不同事件。
+
+<img class="project-hero" src="/img/optimized/njusz.webp" alt="NJUSZ-CS 游戏截图" width="1280" height="720" loading="lazy" decoding="async">
 
 ## 我的工作
 

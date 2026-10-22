@@ -1,0 +1,15 @@
+intro:
+  zh: 我是**南京大学智能科学与技术学院**本科生，在 **Physical Intelligence Lab（PIL，原 NJU-3DV）**接受科研训练，指导教师为[姚遥老师](https://yoyo000.github.io/)。
+  en: I am an undergraduate at the **School of Intelligence Science and Technology, Nanjing University**, receiving research training in the **Physical Intelligence Lab (PIL, formerly NJU-3DV)** under [Prof. Yao Yao](https://yoyo000.github.io/).
+admission:
+  zh: 已于 **2026 年 9 月**通过推免与姚老师完成双选，将于 **2027 年**入学攻读硕士学位。
+  en: In **September 2026**, I secured a place through recommendation-based admission to pursue a **master's degree under Prof. Yao Yao, starting in 2027**.
+interests: [3D Vision, 3D Reconstruction, Gaussian Splatting, AI Agents]
+education:
+  - period: {zh: '2023.09 — 至今', en: 'Sep 2023 — Present'}
+    text:
+      zh: 南京大学，智能科学与技术学院，本科
+      en: Undergraduate, School of Intelligence Science and Technology, Nanjing University
+labels:
+  zh: {interests: 研究兴趣, news: 近期动态, projects: 代表项目, all_projects: 查看全部项目 →, education: 教育经历, honors: 荣誉}
+  en: {interests: Research interests, news: Updates, projects: Selected projects, all_projects: View all projects →, education: Education, honors: Honors}

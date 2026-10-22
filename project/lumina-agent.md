@@ -5,17 +5,17 @@ description: 华为鸿蒙系统操控 Agent 竞赛冠军方案。
 lang: zh
 translation_url: /en/project/lumina-agent.html
 header:
-  teaser: /img/lumina.png
+  teaser: /img/optimized/lumina.webp
 ---
-
-<img class="project-hero" src="/img/lumina.png" alt="Lumina-Agent 项目封面">
 
 <span class="project-tag">Champion · Rank 1</span>
 
 华为云“鸿蒙系统操控 Agent 竞赛”冠军方案。项目面向 **5GB NPU 显存限制**与复杂多轮对话，以数据为中心，构建显存感知的端到端语音指令系统。
 
-[GitHub 仓库](https://github.com/LYZ0306/Lumina-Agent){: .btn .btn--primary target="_blank" rel="noopener" }
-[项目汇报 PDF](https://github.com/LYZ0306/Lumina-Agent/blob/main/docs/Lumina-Agent_Final_Presentation.pdf){: .btn target="_blank" rel="noopener" }
+[GitHub 仓库](https://github.com/YuzeLv/Lumina-Agent){: .btn .btn--primary target="_blank" rel="noopener" }
+[项目汇报 PDF](https://github.com/YuzeLv/Lumina-Agent/blob/main/docs/Lumina-Agent_Final_Presentation.pdf){: .btn target="_blank" rel="noopener" }
+
+<img class="project-hero" src="/img/optimized/lumina.webp" alt="Lumina-Agent 项目封面" width="1134" height="639" loading="lazy" decoding="async">
 
 ## 为什么这样设计
 
@@ -25,7 +25,7 @@ header:
 
 我主要负责**系统部署与显存优化**，包括在受限 NPU 环境中对齐训练与推理精度、压缩上下文开销，以及确保端到端链路稳定运行。
 
-## 核心工作
+## 团队方案
 
 - **显存感知压缩**：语义蒸馏工具描述、精简枚举示例，在保留调用信息的同时降低上下文长度。
 - **消费级显卡长文本训练**：在 RTX 3090 上结合梯度检查点、全线性层 LoRA 与 BF16 完成 6k 上下文训练。
@@ -35,8 +35,7 @@ header:
 ## 结果
 
 - 决赛排名：**冠军（Rank 1）**
-- 本地 Smoke Test：**100%**
-- 复杂逻辑准确率：**90%+**
+- 项目仓库报告的内部测试：本地 Smoke Test **100%**，复杂逻辑准确率 **90%+**。仓库未列出测试样本总量，以上数字限于团队的内部测试范围。
 
 核心团队：吕禹泽（架构与算法）、拾乙淅（数据工程与反幻觉）、刘晓睿（部署与显存优化）。
 

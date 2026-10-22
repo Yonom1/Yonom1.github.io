@@ -6,11 +6,11 @@ lang: zh
 translation_url: /en/project/shapez.html
 ---
 
-<img class="project-hero" src="/img/shapez.png" alt="类异形工厂游戏截图">
-
 <span class="project-tag">Independent · Qt</span>
 
 这是我在大一暑假自学 Qt 后独立完成的第一个较大规模 GUI 项目。它让我第一次完整经历功能拆分、界面实现、调试与展示的全过程。
+
+<img class="project-hero" src="/img/optimized/shapez.webp" alt="类异形工厂游戏截图" width="1280" height="758" loading="lazy" decoding="async">
 
 ## 结果与收获
 

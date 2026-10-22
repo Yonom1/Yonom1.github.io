@@ -6,8 +6,6 @@ lang: en
 translation_url: /project/njuis-wiki.html
 ---
 
-<img class="project-hero" src="/img/njuis-wiki.png" alt="NJUIS-Wiki website">
-
 <span class="project-tag">Student Service · Open Source · Ongoing</span>
 
 NJUIS-Wiki is an unofficial knowledge base created and maintained by students of the School of Intelligence Science and Technology at Nanjing University. It turns experience scattered across cohorts into a searchable, evolving, and reusable public resource.
@@ -15,6 +13,8 @@ NJUIS-Wiki is an unofficial knowledge base created and maintained by students of
 [Visit the website](https://njuis-students.github.io/){: .btn .btn--primary target="_blank" rel="noopener" }
 [GitHub repository](https://github.com/NJUIS-Students/NJUIS-Students.github.io){: .btn target="_blank" rel="noopener" }
 [Contributors](https://njuis-students.github.io/7-%E8%B4%A1%E7%8C%AE%E7%AF%87/3-%E8%B4%A1%E7%8C%AE%E8%80%85%E5%90%8D%E5%8D%95.html){: .btn target="_blank" rel="noopener" }
+
+<img class="project-hero" src="/img/optimized/njuis-wiki.webp" alt="NJUIS-Wiki website" width="1280" height="730" loading="lazy" decoding="async">
 
 ## Why I contribute
 

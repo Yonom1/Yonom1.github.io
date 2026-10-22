@@ -1,0 +1,19 @@
+{% assign language = page.lang | default: 'zh' %}
+{% assign project_prefix = '/project/' %}
+{% if language == 'en' %}{% assign project_prefix = '/en/project/' %}{% endif %}
+<div class="project-list{% if include.selected %} selected-projects{% endif %}">
+  {% for project in site.data.projects %}
+    {% if include.selected and project.selected != true %}{% continue %}{% endif %}
+    {% assign project_url = project.slug | prepend: project_prefix | append: '.html' %}
+    <article class="project-card">
+      <a class="project-thumbnail" href="{{ project_url | relative_url }}" tabindex="-1" aria-hidden="true">
+        <img src="{{ project.thumbnail | relative_url }}" alt="" width="{{ project.image_width }}" height="{{ project.image_height }}" loading="lazy" decoding="async">
+      </a>
+      <div>
+        {% if include.selected %}<h3>{% else %}<h2>{% endif %}<a href="{{ project_url | relative_url }}">{{ project.title[language] | escape }}</a>{% if include.selected %}</h3>{% else %}</h2>{% endif %}
+        <p>{{ project.summary[language] | escape }}</p>
+        <div class="project-meta">{{ project.meta[language] | escape }}</div>
+      </div>
+    </article>
+  {% endfor %}
+</div>

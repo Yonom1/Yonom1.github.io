@@ -1,0 +1,50 @@
+- slug: 3dgs
+  selected: true
+  thumbnail: /img/optimized/3dgs-thumb.webp
+  image_width: 640
+  image_height: 436
+  title: {zh: 几何先验监督的 3D Gaussian Splatting, en: Geometric-Prior Supervision for 3D Gaussian Splatting}
+  summary:
+    zh: 在组内 Pointrix / msplat 框架上接入几何先验，扩展深度与光流监督，修复相邻帧索引，并完成对照实验。
+    en: Extended the lab's Pointrix / msplat framework with geometric-prior integration, depth and flow supervision, temporal-index fixes, and comparative experiments.
+  meta: {zh: 科研训练 · 2025 · NJU-3DV（现 PIL）, en: Research training · 2025 · NJU-3DV (now PIL)}
+- slug: lumina-agent
+  selected: true
+  thumbnail: /img/optimized/lumina-thumb.webp
+  image_width: 640
+  image_height: 361
+  title: {zh: Lumina-Agent, en: Lumina-Agent}
+  summary:
+    zh: 华为鸿蒙系统操控 Agent 竞赛冠军方案。负责 5GB NPU 显存约束下的系统部署、上下文压缩与显存优化。
+    en: Champion solution for the Huawei HarmonyOS System Control Agent Competition. I worked on deployment, context compression, and optimization within a 5 GB NPU memory budget.
+  meta: {zh: 竞赛项目 · 2025 · 冠军, en: Competition · 2025 · Rank 1}
+- slug: njuis-wiki
+  selected: true
+  thumbnail: /img/optimized/njuis-wiki-thumb.webp
+  image_width: 640
+  image_height: 365
+  title: {zh: 智科全家桶（NJUIS-Wiki）, en: NJUIS-Wiki}
+  summary:
+    zh: 南京大学智科学生共同维护的民间知识库。作为原始贡献者之一，参与培养方案与课程攻略的整理和维护。
+    en: A student-maintained knowledge base at NJU. As one of its original contributors, I organize and maintain curriculum plans and course guides.
+  meta: {zh: 学生服务 · 开源共建 · 2026 · 持续维护, en: Student service · Open source · 2026 · Ongoing}
+- slug: njuszcs
+  selected: false
+  thumbnail: /img/optimized/njusz-thumb.webp
+  image_width: 640
+  image_height: 360
+  title: {zh: NJUSZ-CS, en: NJUSZ-CS}
+  summary:
+    zh: 使用 Qt6 开发的校园食堂模拟器。负责前期策划、后期剪辑与部分美术，课程评分 94.2 分。
+    en: 'A Qt6 campus canteen simulator. I contributed planning, video editing, and part of the visual design. Course score: 94.2.'
+  meta: {zh: 课程项目 · 2025, en: Course project · 2025}
+- slug: shapez
+  selected: false
+  thumbnail: /img/optimized/shapez-thumb.webp
+  image_width: 640
+  image_height: 379
+  title: {zh: 类异形工厂游戏, en: ShapeZ-like Factory Game}
+  summary:
+    zh: 自学 Qt 后独立完成的首个较大规模 GUI 项目，涵盖功能拆分、界面实现、调试与展示，课程助教评分 96 分。
+    en: 'My first substantial GUI project, independently built after learning Qt, from feature planning to implementation and debugging. Course score: 96.'
+  meta: {zh: 课程项目 · 2024 · 独立完成, en: Course project · 2024 · Independent}

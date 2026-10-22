@@ -25,7 +25,7 @@
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
+      <nav id="site-nav" class="greedy-nav" aria-label="{% if is_english %}Primary navigation{% else %}主导航{% endif %}">
         <a class="site-title" href="{{ brand_url | relative_url }}">
           {{ brand_title | escape_once | strip }}
           <span class="site-subtitle">{{ brand_subtitle | escape_once | strip }}</span>
@@ -36,8 +36,15 @@
             {% if link.title == 'English' or link.title == '中文' %}
               {% assign item_url = language_url %}
             {% endif %}
+            {% assign is_current = false %}
+            {% if page.url == link.url %}{% assign is_current = true %}{% endif %}
+            {% if link.url == '/project.html' or link.url == '/en/project.html' %}
+              {% if page.url contains '/project/' %}{% assign is_current = true %}{% endif %}
+            {% endif %}
+            {% assign is_language_link = false %}
+            {% if link.title == 'English' or link.title == '中文' %}{% assign is_language_link = true %}{% assign is_current = false %}{% endif %}
             <li class="masthead__menu-item">
-              <a href="{{ item_url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}{% if link.target %} target="{{ link.target }}"{% endif %}>{{ link.title }}</a>
+              <a href="{{ item_url | relative_url }}"{% if is_current %} aria-current="{% if page.url == link.url %}page{% else %}location{% endif %}"{% endif %}{% if is_language_link %} lang="{% if is_english %}zh-CN{% else %}en{% endif %}" hreflang="{% if is_english %}zh-CN{% else %}en{% endif %}"{% endif %}{% if link.description %} title="{{ link.description }}"{% endif %}{% if link.target %} target="{{ link.target }}" rel="noopener"{% endif %}>{{ link.title }}</a>
             </li>
           {%- endfor -%}
         </ul>
